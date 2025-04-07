@@ -10,6 +10,7 @@ import Results from "@/pages/Results";
 import Universities from "@/pages/Universities";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ProfileProvider } from "@/context/ProfileContext";
 
 function Router() {
   return (
@@ -33,8 +34,10 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Router />
-      <Toaster />
+      <ProfileProvider>
+        <Router />
+        <Toaster />
+      </ProfileProvider>
     </QueryClientProvider>
   );
 }
