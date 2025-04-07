@@ -8,13 +8,13 @@ import { universities } from '@/data/universities';
 const Universities: React.FC = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedProvince, setSelectedProvince] = useState('');
+  const [selectedProvince, setSelectedProvince] = useState('all');
 
   // Filter universities based on search term and province
   const filteredUniversities = universities.filter((university) => {
     const matchesSearch = university.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           university.location.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesProvince = selectedProvince === '' || university.province === selectedProvince;
+    const matchesProvince = selectedProvince === 'all' || university.province === selectedProvince;
     return matchesSearch && matchesProvince;
   });
 
@@ -63,7 +63,7 @@ const Universities: React.FC = () => {
                   <SelectValue placeholder={t('universities.allProvinces')} />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="">{t('universities.allProvinces')}</SelectItem>
+                  <SelectItem value="all">{t('universities.allProvinces')}</SelectItem>
                   {provinceOptions.map((province) => (
                     <SelectItem key={province} value={province}>{province}</SelectItem>
                   ))}

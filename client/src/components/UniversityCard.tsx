@@ -38,13 +38,24 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ university }) => {
             </Badge>
           </div>
         )}
+        
+        {/* University Emblem */}
+        <div className="absolute -bottom-10 left-6">
+          <div className="w-20 h-20 rounded-full bg-white shadow-lg border-4 border-white overflow-hidden flex items-center justify-center">
+            <img 
+              src={`https://ui-avatars.com/api/?name=${encodeURIComponent(university.name)}&background=random&color=fff&bold=true&size=80`} 
+              alt={`${university.name} emblem`}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
       
-      <CardContent className="p-6 flex-grow">
+      <CardContent className="p-6 pt-12 flex-grow">
         <div className="flex justify-between items-start mb-3">
           <h3 className="text-xl font-bold text-gray-900 hover:text-primary-600 transition-colors">{university.name}</h3>
           <div className="flex items-center justify-center min-w-[38px] h-[38px] rounded-full bg-primary-50 text-primary-700 font-bold border border-primary-200">
-            {(university.ratings.academicExcellence + university.ratings.studentSatisfaction) / 2}
+            {((university.ratings.academicExcellence + university.ratings.studentSatisfaction) / 2).toFixed(1)}
           </div>
         </div>
         
