@@ -16,231 +16,345 @@ interface AssessmentSection {
   questions: AssessmentQuestion[];
 }
 
+// Test types and descriptions based on South African academic and career guidance systems
+export const testDescriptions = {
+  dat: {
+    name: 'Differential Aptitude Test (DAT)',
+    description: 'Evaluates various cognitive abilities including verbal reasoning, numerical ability, abstract reasoning, and spatial relations to help identify academic and career strengths.',
+    recommendedFor: 'Grade 9-12 students choosing subjects or considering career paths',
+    duration: '30-45 minutes'
+  },
+  holland: {
+    name: 'Holland Code (RIASEC) Assessment',
+    description: 'Identifies your personality type as Realistic, Investigative, Artistic, Social, Enterprising, or Conventional, mapping these traits to suitable career fields.',
+    recommendedFor: 'Students of all ages considering career options',
+    duration: '20-30 minutes'
+  },
+  mbti: {
+    name: 'Myers-Briggs Type Indicator',
+    description: 'Explores personality preferences across four dimensions to understand how you perceive the world and make decisions.',
+    recommendedFor: 'Older students refining career choices',
+    duration: '25-35 minutes'
+  },
+  academic: {
+    name: 'South African University Subject Choice Assessment',
+    description: 'Evaluates specific academic readiness for university modules and helps align subject choices with degree requirements at South African universities.',
+    recommendedFor: 'Grade 11-12 students preparing for university applications',
+    duration: '30-40 minutes'
+  }
+};
+
 export const assessmentQuestions: AssessmentSection[] = [
+  // Differential Aptitude Test (DAT) - Inspired assessment
   {
-    id: 'cognitive',
-    title: 'Cognitive Aptitude Assessment',
-    description: 'Evaluate your analytical and problem-solving abilities',
+    id: 'aptitude',
+    title: 'Differential Aptitude Test (DAT)',
+    description: 'This assessment evaluates various cognitive abilities to help identify your academic and career strengths.',
     questions: [
       {
-        id: 'cog_1',
-        text: 'When solving problems, I prefer to:',
+        id: 'apt_1',
+        text: 'When solving mathematical problems, I:',
         options: [
-          { text: 'Follow established procedures and methods', value: 'conventional' },
-          { text: 'Find new and innovative solutions', value: 'innovative' },
-          { text: 'Analyze all possible approaches methodically', value: 'analytical' },
-          { text: 'Collaborate with others to find solutions', value: 'collaborative' }
+          { text: 'Quickly grasp numerical patterns and relationships', value: 'analytical' },
+          { text: 'Can work through them step-by-step but need time', value: 'methodical' },
+          { text: 'Often prefer to use visual methods like graphs or diagrams', value: 'visual' },
+          { text: 'Find them challenging and prefer other types of problems', value: 'non-numerical' }
         ]
       },
       {
-        id: 'cog_2',
-        text: 'When learning something new, I prefer to:',
+        id: 'apt_2',
+        text: 'When reading complex text or instructions:',
         options: [
-          { text: 'Read detailed explanations and instructions', value: 'verbal' },
-          { text: 'See visual demonstrations or diagrams', value: 'visual' },
-          { text: 'Try it out hands-on and learn from experience', value: 'kinesthetic' },
-          { text: 'Discuss concepts and ask questions', value: 'auditory' }
+          { text: 'I easily understand and remember the main ideas and details', value: 'verbal-high' },
+          { text: 'I grasp the main ideas but might miss some details', value: 'verbal-medium' },
+          { text: 'I need to read multiple times to fully understand', value: 'verbal-developing' },
+          { text: 'I prefer information presented visually or through demonstration', value: 'non-verbal' }
         ]
       },
       {
-        id: 'cog_3',
-        text: 'When working on a project, I focus most on:',
+        id: 'apt_3',
+        text: 'When looking at a mechanical diagram or exploded view:',
         options: [
-          { text: 'Meeting deadlines and achieving goals', value: 'practical' },
-          { text: 'Understanding the underlying principles', value: 'theoretical' },
-          { text: 'Finding creative and unique approaches', value: 'creative' },
-          { text: 'Ensuring all details are correct and thorough', value: 'detail-oriented' }
+          { text: 'I can easily visualize how the parts fit together in 3D', value: 'spatial-high' },
+          { text: 'I can understand the basic structure but might miss some relationships', value: 'spatial-medium' },
+          { text: 'I find it challenging to mentally visualize the complete assembly', value: 'spatial-developing' },
+          { text: 'I strongly prefer written explanations to technical diagrams', value: 'verbal-preference' }
         ]
       },
       {
-        id: 'cog_4',
-        text: 'I find it easier to remember:',
+        id: 'apt_4',
+        text: 'When faced with a logic puzzle or abstract pattern:',
         options: [
-          { text: 'Facts, names, and specific details', value: 'factual' },
-          { text: 'Connections between concepts and the big picture', value: 'conceptual' },
-          { text: 'Visual information like images and diagrams', value: 'visual-spatial' },
-          { text: 'Steps in a process or sequence of events', value: 'sequential' }
+          { text: 'I quickly recognize patterns and can predict what comes next', value: 'abstract-high' },
+          { text: 'With some time, I can usually figure out the underlying pattern', value: 'abstract-medium' },
+          { text: 'I find abstract patterns challenging but can solve with effort', value: 'abstract-developing' },
+          { text: 'I prefer concrete problems to abstract patterns', value: 'concrete-preference' }
         ]
       },
       {
-        id: 'cog_5',
-        text: 'When making decisions, I typically:',
+        id: 'apt_5',
+        text: 'When checking detailed work for errors:',
         options: [
-          { text: 'Analyze data and facts objectively', value: 'analytical' },
-          { text: 'Consider how it will affect people involved', value: 'empathetic' },
-          { text: 'Trust my instincts and intuition', value: 'intuitive' },
-          { text: 'Weigh pros and cons methodically', value: 'logical' }
+          { text: 'I notice even small inconsistencies and details that others miss', value: 'detail-oriented' },
+          { text: 'I can spot major errors but might miss minor details', value: 'balanced' },
+          { text: 'I sometimes overlook details in favor of the big picture', value: 'big-picture' },
+          { text: 'I find detail checking tedious and prefer creative tasks', value: 'creative-preference' }
         ]
       }
     ]
   },
+  
+  // Holland Code (RIASEC) Assessment
+  {
+    id: 'holland',
+    title: 'Holland Code (RIASEC) Assessment',
+    description: 'Discover your personality type and how it relates to different career paths. This assessment identifies your personality as Realistic, Investigative, Artistic, Social, Enterprising, or Conventional.',
+    questions: [
+      {
+        id: 'hol_1',
+        text: 'I would enjoy a job that involves:',
+        options: [
+          { text: 'Working with tools, machines, or outdoor activities', value: 'realistic' },
+          { text: 'Research, analysis, and solving complex problems', value: 'investigative' },
+          { text: 'Creative expression through art, music, or writing', value: 'artistic' },
+          { text: 'Teaching, counseling, or helping others', value: 'social' }
+        ]
+      },
+      {
+        id: 'hol_2',
+        text: 'I would prefer a work environment that:',
+        options: [
+          { text: 'Allows me to take charge and influence others', value: 'enterprising' },
+          { text: 'Has clear structure, procedures, and expectations', value: 'conventional' },
+          { text: 'Allows me to work with physical objects or outdoors', value: 'realistic' },
+          { text: 'Encourages scientific thinking or theoretical analysis', value: 'investigative' }
+        ]
+      },
+      {
+        id: 'hol_3',
+        text: 'I feel most satisfied when I can:',
+        options: [
+          { text: 'Create something new or express myself artistically', value: 'artistic' },
+          { text: 'Help others or contribute to their wellbeing', value: 'social' },
+          { text: 'Lead a project, persuade others, or achieve business goals', value: 'enterprising' },
+          { text: 'Organize information or create efficient systems', value: 'conventional' }
+        ]
+      },
+      {
+        id: 'hol_4',
+        text: 'In high school, I enjoy/enjoyed classes like:',
+        options: [
+          { text: 'Physical Education, Workshop, or Agriculture', value: 'realistic' },
+          { text: 'Science, Mathematics, or Computer Studies', value: 'investigative' },
+          { text: 'Art, Music, Drama, or Creative Writing', value: 'artistic' },
+          { text: 'Life Orientation, Languages, or History', value: 'social' }
+        ]
+      },
+      {
+        id: 'hol_5',
+        text: 'My friends and family would describe me as:',
+        options: [
+          { text: 'Practical, hands-on, and straightforward', value: 'realistic' },
+          { text: 'Analytical, curious, and intellectual', value: 'investigative' },
+          { text: 'Creative, expressive, and original', value: 'artistic' },
+          { text: 'Helpful, friendly, and understanding', value: 'social' }
+        ]
+      },
+      {
+        id: 'hol_6',
+        text: 'I would feel most comfortable in a career that involves:',
+        options: [
+          { text: 'Selling, persuading, or managing others', value: 'enterprising' },
+          { text: 'Working with data, details, and systematic processes', value: 'conventional' },
+          { text: 'Building, repairing, or working outdoors', value: 'realistic' },
+          { text: 'Solving complex problems or conducting research', value: 'investigative' }
+        ]
+      }
+    ]
+  },
+  
+  // Myers-Briggs Type Indicator Inspired Assessment
   {
     id: 'personality',
-    title: 'Personality Assessment',
-    description: 'Understand your personality type and work preferences',
+    title: 'Personality Type Assessment',
+    description: 'Based on the Myers-Briggs Type Indicator (MBTI), this assessment explores your personality preferences to help identify suitable academic and career paths.',
     questions: [
       {
-        id: 'per_1',
-        text: 'In social situations, I tend to:',
+        id: 'mbti_1',
+        text: 'When meeting new people, I tend to:',
         options: [
-          { text: 'Feel energized by interacting with many people', value: 'extraverted' },
-          { text: 'Prefer deeper conversations with fewer people', value: 'introverted' },
-          { text: 'Enjoy being the center of attention', value: 'expressive' },
-          { text: 'Observe and listen more than speak', value: 'reflective' }
+          { text: 'Feel energized and enjoy expanding my social circle', value: 'extraverted' },
+          { text: 'Prefer deeper connections with a smaller group of people', value: 'introverted' },
+          { text: 'Be outgoing at first but need alone time to recharge afterward', value: 'ambivert-e' },
+          { text: 'Take time to warm up but enjoy socializing once comfortable', value: 'ambivert-i' }
         ]
       },
       {
-        id: 'per_2',
-        text: 'When approaching a task, I prefer to:',
+        id: 'mbti_2',
+        text: 'When processing information, I prefer to focus on:',
         options: [
-          { text: 'Follow a detailed plan with clear steps', value: 'structured' },
-          { text: 'Adapt as I go and keep options open', value: 'flexible' },
-          { text: 'Work intensively until completion', value: 'focused' },
-          { text: 'Take breaks and work in bursts of energy', value: 'varied' }
+          { text: 'Facts, details, and concrete information', value: 'sensing' },
+          { text: 'Patterns, possibilities, and theoretical concepts', value: 'intuitive' },
+          { text: 'Practical applications with some consideration of future potential', value: 'sensing-some-intuitive' },
+          { text: 'The big picture with attention to relevant details', value: 'intuitive-some-sensing' }
         ]
       },
       {
-        id: 'per_3',
-        text: 'When facing a challenge, I typically:',
+        id: 'mbti_3',
+        text: 'When making important decisions, I typically:',
         options: [
-          { text: 'Find practical, real-world solutions', value: 'realistic' },
-          { text: 'Consider new possibilities and theories', value: 'innovative' },
-          { text: 'Rely on what has worked in the past', value: 'traditional' },
-          { text: 'Look for the most efficient approach', value: 'efficient' }
+          { text: 'Consider how choices affect people and maintain harmony', value: 'feeling' },
+          { text: 'Analyze logically and objectively weigh pros and cons', value: 'thinking' },
+          { text: 'Use logical analysis while considering the human element', value: 'thinking-some-feeling' },
+          { text: 'Consider people\'s needs while looking for the most rational choice', value: 'feeling-some-thinking' }
         ]
       },
       {
-        id: 'per_4',
-        text: 'In group projects, I usually take the role of:',
+        id: 'mbti_4',
+        text: 'In my approach to work and planning, I prefer to:',
         options: [
-          { text: 'Leader or coordinator', value: 'leading' },
-          { text: 'Idea generator or innovator', value: 'creative' },
-          { text: 'Detail checker or quality controller', value: 'analytical' },
-          { text: 'Mediator or harmonizer', value: 'supportive' }
+          { text: 'Have clear structure, schedules, and closure on tasks', value: 'judging' },
+          { text: 'Stay flexible, keep options open, and adapt as needed', value: 'perceiving' },
+          { text: 'Plan ahead but remain open to last-minute changes', value: 'judging-some-perceiving' },
+          { text: 'Go with the flow but appreciate some organization', value: 'perceiving-some-judging' }
         ]
       },
       {
-        id: 'per_5',
-        text: 'My approach to rules and guidelines is:',
+        id: 'mbti_5',
+        text: 'When learning something new, I prefer:',
         options: [
-          { text: 'Follow them carefully and consistently', value: 'conventional' },
-          { text: 'Question them and suggest improvements', value: 'questioning' },
-          { text: 'Adapt them to the specific situation', value: 'adaptable' },
-          { text: 'Understand the reasoning behind them first', value: 'analytical' }
+          { text: 'Practical examples and step-by-step instructions', value: 'sensing' },
+          { text: 'Understanding underlying concepts and exploring possibilities', value: 'intuitive' },
+          { text: 'A mix of theory and practical application', value: 'balanced-sn' },
+          { text: 'Connecting new information to existing knowledge', value: 'intuitive-pattern' }
         ]
       }
     ]
   },
+  
+  // South African University Subject Choice Assessment
   {
-    id: 'interests',
-    title: 'Interest Mapping',
-    description: 'Discover your academic and career interests',
+    id: 'academic',
+    title: 'University Academic Preparation Assessment',
+    description: 'This assessment helps align your skills and preferences with specific academic programs at South African universities.',
     questions: [
       {
-        id: 'int_1',
-        text: 'I enjoy activities that involve:',
+        id: 'acad_1',
+        text: 'Which of these university learning environments would you prefer?',
         options: [
-          { text: 'Working with my hands and physical skills', value: 'realistic' },
-          { text: 'Research, analysis, and solving complex problems', value: 'investigative' },
-          { text: 'Creative expression and artistic pursuits', value: 'artistic' },
-          { text: 'Helping, teaching, or providing care for others', value: 'social' }
+          { text: 'Laboratory or workshop with hands-on experiments', value: 'practical' },
+          { text: 'Lecture hall with theoretical discussions', value: 'theoretical' },
+          { text: 'Studio environment for creative work', value: 'creative' },
+          { text: 'Combination of classroom learning and field experience', value: 'mixed' }
         ]
       },
       {
-        id: 'int_2',
-        text: 'I am most interested in subjects related to:',
+        id: 'acad_2',
+        text: 'In your matric/high school studies, where do you/did you excel most?',
         options: [
-          { text: 'Science, mathematics, and technology', value: 'stem' },
-          { text: 'Language, history, and cultural studies', value: 'humanities' },
-          { text: 'Business, economics, and management', value: 'commerce' },
-          { text: 'Health, medicine, and wellness', value: 'health' }
+          { text: 'Mathematics and Physical Sciences', value: 'stem' },
+          { text: 'Languages, History, or Social Studies', value: 'humanities' },
+          { text: 'Life Sciences or Geography', value: 'natural-sciences' },
+          { text: 'Business Studies, Economics, or Accounting', value: 'commerce' }
         ]
       },
       {
-        id: 'int_3',
-        text: 'In my spare time, I prefer to:',
+        id: 'acad_3',
+        text: 'When writing academic papers or completing projects, I:',
         options: [
-          { text: 'Read, write, or engage in intellectual activities', value: 'intellectual' },
-          { text: 'Create things or express myself artistically', value: 'creative' },
-          { text: 'Socialize and participate in community events', value: 'social' },
-          { text: 'Engage in sports or outdoor activities', value: 'physical' }
+          { text: 'Excel at research and analyzing information', value: 'research' },
+          { text: 'Am good at organizing and presenting information clearly', value: 'organization' },
+          { text: 'Bring creative or innovative perspectives', value: 'creative-thinking' },
+          { text: 'Focus on practical applications and solutions', value: 'application' }
         ]
       },
       {
-        id: 'int_4',
-        text: 'I would find it most satisfying to work in an environment that:',
+        id: 'acad_4',
+        text: 'Regarding financial considerations for university:',
         options: [
-          { text: 'Is structured and organized', value: 'conventional' },
-          { text: 'Encourages innovation and creative thinking', value: 'innovative' },
-          { text: 'Focuses on helping people directly', value: 'service-oriented' },
-          { text: 'Offers leadership and influence opportunities', value: 'enterprising' }
+          { text: 'I intend to apply for NSFAS funding', value: 'nsfas' },
+          { text: 'I\'m interested in scholarships or bursaries', value: 'scholarship' },
+          { text: 'I plan to work part-time while studying', value: 'work-study' },
+          { text: 'Financial aid is not a major concern for me', value: 'self-funded' }
         ]
       },
       {
-        id: 'int_5',
-        text: 'I am motivated by work that:',
+        id: 'acad_5',
+        text: 'My preferred university location would be:',
         options: [
-          { text: 'Makes a positive difference in society', value: 'social-impact' },
-          { text: 'Offers financial stability and security', value: 'security' },
-          { text: 'Provides constant learning and growth', value: 'growth' },
-          { text: 'Allows for independence and self-direction', value: 'autonomy' }
+          { text: 'Urban area with access to industry connections', value: 'urban' },
+          { text: 'Campus with strong community and cultural activities', value: 'community' },
+          { text: 'Institution with top academic reputation regardless of location', value: 'reputation' },
+          { text: 'Close to home to reduce living expenses', value: 'local' }
+        ]
+      },
+      {
+        id: 'acad_6',
+        text: 'My approach to academic workload and studies is:',
+        options: [
+          { text: 'Highly disciplined with consistent study habits', value: 'disciplined' },
+          { text: 'Able to handle pressure and deadline-driven work', value: 'pressure-driven' },
+          { text: 'Prefer collaborative learning with study groups', value: 'collaborative' },
+          { text: 'Independent learner who likes self-paced study', value: 'independent' }
         ]
       }
     ]
   },
+  
+  // Career Values and Aspirations 
   {
     id: 'career',
-    title: 'Career Aspirations',
-    description: 'Explore your professional goals and values',
+    title: 'Career Values and Aspirations',
+    description: 'Explore your professional goals and values to help align your academic path with future career aspirations.',
     questions: [
       {
         id: 'car_1',
-        text: 'My ideal work environment is:',
+        text: 'What type of career impact is most important to you?',
         options: [
-          { text: 'Fast-paced with variety and challenges', value: 'dynamic' },
-          { text: 'Stable and predictable with clear expectations', value: 'structured' },
-          { text: 'Collaborative with plenty of teamwork', value: 'collaborative' },
-          { text: 'Independent with autonomy to make decisions', value: 'autonomous' }
+          { text: 'Contributing to social development and helping communities', value: 'social-impact' },
+          { text: 'Advancing technology or scientific knowledge', value: 'innovation' },
+          { text: 'Creating economic opportunities and business growth', value: 'economic' },
+          { text: 'Preserving culture, education, or environmental sustainability', value: 'preservation' }
         ]
       },
       {
         id: 'car_2',
-        text: 'In my career, I prioritize:',
+        text: 'Which South African industry sector interests you most?',
         options: [
-          { text: 'Making a positive impact on society', value: 'impact' },
-          { text: 'Achieving financial success and stability', value: 'financial' },
-          { text: 'Continuous learning and intellectual growth', value: 'growth' },
-          { text: 'Work-life balance and personal fulfillment', value: 'balance' }
+          { text: 'Mining, Engineering, or Manufacturing', value: 'industrial' },
+          { text: 'Healthcare, Education, or Social Services', value: 'service' },
+          { text: 'Finance, Business, or Information Technology', value: 'commercial' },
+          { text: 'Arts, Media, Tourism, or Creative Industries', value: 'creative-industries' }
         ]
       },
       {
         id: 'car_3',
-        text: 'I would prefer a career that involves:',
+        text: 'In your career, which of these is most important to you?',
         options: [
-          { text: 'Analysis, research, and problem-solving', value: 'analytical' },
-          { text: 'Leadership, management, and strategic planning', value: 'leadership' },
-          { text: 'Creativity, design, and innovation', value: 'creative' },
-          { text: 'Teaching, counseling, or supporting others', value: 'supportive' }
+          { text: 'Job security and stable income', value: 'security' },
+          { text: 'Opportunities for advancement and leadership', value: 'advancement' },
+          { text: 'Work-life balance and personal fulfillment', value: 'balance' },
+          { text: 'Continuous learning and professional development', value: 'growth' }
         ]
       },
       {
         id: 'car_4',
-        text: 'My approach to career advancement is:',
+        text: 'Which workplace environment would you thrive in?',
         options: [
-          { text: 'Climbing the corporate ladder in an organization', value: 'traditional' },
-          { text: 'Becoming an expert or specialist in my field', value: 'specialist' },
-          { text: 'Building my own business or practice', value: 'entrepreneurial' },
-          { text: 'Finding a role that aligns with my values and interests', value: 'values-driven' }
+          { text: 'Corporate structure with clear advancement paths', value: 'corporate' },
+          { text: 'Public service or government institution', value: 'public' },
+          { text: 'Entrepreneurial or startup environment', value: 'entrepreneurial' },
+          { text: 'Non-profit or community-based organization', value: 'non-profit' }
         ]
       },
       {
         id: 'car_5',
-        text: 'When considering future career options, I am most concerned about:',
+        text: 'How important is international experience in your career plan?',
         options: [
-          { text: 'Job security and stability in the industry', value: 'security' },
-          { text: 'Opportunities for growth and advancement', value: 'advancement' },
-          { text: 'Doing work that feels meaningful and important', value: 'meaning' },
-          { text: 'Having flexibility and control over my schedule', value: 'flexibility' }
+          { text: 'Very important - I hope to work globally', value: 'international' },
+          { text: 'Somewhat important - I\'d like some international exposure', value: 'some-international' },
+          { text: 'Not very important - I prefer focusing on South African opportunities', value: 'local-focus' },
+          { text: 'Undecided - I\'m open to whatever opportunities arise', value: 'flexible' }
         ]
       }
     ]
