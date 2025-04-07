@@ -41,28 +41,28 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/">
-                  <a className="text-gray-300 hover:text-white">{t('nav.home')}</a>
+                <Link href="/" className="text-gray-300 hover:text-white">
+                  {t('nav.home')}
                 </Link>
               </li>
               <li>
-                <Link href="/about">
-                  <a className="text-gray-300 hover:text-white">{t('nav.about')}</a>
+                <Link href="/about" className="text-gray-300 hover:text-white">
+                  {t('nav.about')}
                 </Link>
               </li>
               <li>
-                <Link href="/universities">
-                  <a className="text-gray-300 hover:text-white">{t('nav.universities')}</a>
+                <Link href="/universities" className="text-gray-300 hover:text-white">
+                  {t('nav.universities')}
                 </Link>
               </li>
               <li>
-                <Link href="/assessment">
-                  <a className="text-gray-300 hover:text-white">{t('nav.assessment')}</a>
+                <Link href="/assessment" className="text-gray-300 hover:text-white">
+                  {t('nav.assessment')}
                 </Link>
               </li>
               <li>
-                <Link href="/contact">
-                  <a className="text-gray-300 hover:text-white">{t('footer.contact')}</a>
+                <Link href="/contact" className="text-gray-300 hover:text-white">
+                  {t('footer.contact')}
                 </Link>
               </li>
             </ul>
@@ -72,28 +72,28 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">{t('footer.resources')}</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/nsfas">
-                  <a className="text-gray-300 hover:text-white">{t('footer.nsfasInfo')}</a>
+                <Link href="/nsfas" className="text-gray-300 hover:text-white">
+                  {t('footer.nsfasInfo')}
                 </Link>
               </li>
               <li>
-                <Link href="/scholarships">
-                  <a className="text-gray-300 hover:text-white">{t('footer.scholarshipGuide')}</a>
+                <Link href="/scholarships" className="text-gray-300 hover:text-white">
+                  {t('footer.scholarshipGuide')}
                 </Link>
               </li>
               <li>
-                <Link href="/deadlines">
-                  <a className="text-gray-300 hover:text-white">{t('footer.applicationDeadlines')}</a>
+                <Link href="/deadlines" className="text-gray-300 hover:text-white">
+                  {t('footer.applicationDeadlines')}
                 </Link>
               </li>
               <li>
-                <Link href="/careers">
-                  <a className="text-gray-300 hover:text-white">{t('footer.careerGuides')}</a>
+                <Link href="/careers" className="text-gray-300 hover:text-white">
+                  {t('footer.careerGuides')}
                 </Link>
               </li>
               <li>
-                <Link href="/blog">
-                  <a className="text-gray-300 hover:text-white">{t('footer.blog')}</a>
+                <Link href="/blog" className="text-gray-300 hover:text-white">
+                  {t('footer.blog')}
                 </Link>
               </li>
             </ul>
@@ -136,17 +136,17 @@ const Footer: React.FC = () => {
             © 2023 UniGuide. All rights reserved.
           </div>
           <div className="mt-4 md:mt-0 flex space-x-6 text-sm text-gray-400">
-            <Link href="/privacy">
-              <a className="hover:text-white">{t('footer.privacyPolicy')}</a>
+            <Link href="/privacy" className="hover:text-white">
+              {t('footer.privacyPolicy')}
             </Link>
-            <Link href="/terms">
-              <a className="hover:text-white">{t('footer.termsOfService')}</a>
+            <Link href="/terms" className="hover:text-white">
+              {t('footer.termsOfService')}
             </Link>
-            <Link href="/cookies">
-              <a className="hover:text-white">{t('footer.cookiePolicy')}</a>
+            <Link href="/cookies" className="hover:text-white">
+              {t('footer.cookiePolicy')}
             </Link>
-            <Link href="/website-map">
-              <a className="hover:text-white">{t('footer.siteMap', 'Site Map')}</a>
+            <Link href="/website-map" className="hover:text-white">
+              {t('footer.siteMap')}
             </Link>
           </div>
         </div>

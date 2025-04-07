@@ -38,6 +38,9 @@ const Navbar: React.FC = () => {
             <Link href="/universities" className={`${isActive("/universities") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
               {t("nav.universities")}
             </Link>
+            <Link href="/tvet-colleges" className={`${isActive("/tvet-colleges") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
+              {t("nav.tvetColleges")}
+            </Link>
             <Link href="/assessment" className={`${isActive("/assessment") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
               {t("nav.assessment")}
             </Link>

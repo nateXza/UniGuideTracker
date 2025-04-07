@@ -8,6 +8,7 @@ import Profile from "@/pages/Profile";
 import Assessment from "@/pages/Assessment";
 import Results from "@/pages/Results";
 import Universities from "@/pages/Universities";
+import TVETColleges from "@/pages/TVETColleges";
 import About from "@/pages/About";
 import Login from "@/pages/Login";
 import Contact from "@/pages/Contact";
@@ -35,6 +36,7 @@ function Router() {
           <Route path="/assessment" component={Assessment} />
           <Route path="/results" component={Results} />
           <Route path="/universities" component={Universities} />
+          <Route path="/tvet-colleges" component={TVETColleges} />
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/contact" component={Contact} />

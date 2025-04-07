@@ -41,6 +41,17 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
           {t('nav.universities')}
         </Link>
         <Link 
+          href="/tvet-colleges" 
+          className={`block px-3 py-2 rounded-md text-base font-medium ${
+            isActive("/tvet-colleges") 
+              ? "text-primary-600 bg-primary-50" 
+              : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+          }`}
+          onClick={onClose}
+        >
+          {t('nav.tvetColleges')}
+        </Link>
+        <Link 
           href="/assessment" 
           className={`block px-3 py-2 rounded-md text-base font-medium ${
             isActive("/assessment") 
