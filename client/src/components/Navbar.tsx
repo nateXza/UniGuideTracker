@@ -23,45 +23,26 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center group">
-              <div className="relative">
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-primary-600 to-primary-400 flex items-center justify-center text-white font-extrabold text-2xl transform rotate-3 shadow-lg group-hover:rotate-0 transition-transform duration-300">
-                  U<span className="text-yellow-300 absolute top-1 right-1 text-xs">★</span>
-                </div>
-                <div className="absolute inset-0 bg-white bg-opacity-20 rounded-lg scale-110 blur-sm -z-10"></div>
-              </div>
-              <div className="ml-2 flex flex-col">
-                <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-primary-500">
-                  UniGuide
-                </span>
-                <span className="text-[10px] -mt-1 text-gray-600 tracking-wider font-medium">
-                  DISCOVER YOUR PATH
-                </span>
-              </div>
+            <Link href="/" className="flex items-center">
+              <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-800 via-primary-600 to-primary-500 tracking-tight">
+                UniGuide
+              </span>
             </Link>
           </div>
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 items-center">
-            <Link href="/">
-              <a className={`${isActive("/") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
-                {t("nav.home")}
-              </a>
+            <Link href="/" className={`${isActive("/") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
+              {t("nav.home")}
             </Link>
-            <Link href="/universities">
-              <a className={`${isActive("/universities") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
-                {t("nav.universities")}
-              </a>
+            <Link href="/universities" className={`${isActive("/universities") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
+              {t("nav.universities")}
             </Link>
-            <Link href="/assessment">
-              <a className={`${isActive("/assessment") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
-                {t("nav.assessment")}
-              </a>
+            <Link href="/assessment" className={`${isActive("/assessment") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
+              {t("nav.assessment")}
             </Link>
-            <Link href="/about">
-              <a className={`${isActive("/about") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
-                {t("nav.about")}
-              </a>
+            <Link href="/about" className={`${isActive("/about") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
+              {t("nav.about")}
             </Link>
             <LanguageSelector />
           </nav>
