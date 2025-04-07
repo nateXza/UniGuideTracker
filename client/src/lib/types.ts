@@ -62,6 +62,7 @@ export interface University {
   tuitionRangeFees: string;
   accommodationAvailable: boolean;
   applicationDeadline: string;
+  website?: string; // University official website
 }
 
 // Testimonial related types

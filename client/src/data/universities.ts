@@ -25,7 +25,8 @@ export const universities: University[] = [
     admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 36-42 depending on the degree program.',
     tuitionRangeFees: 'R60,000 - R80,000 per year',
     accommodationAvailable: true,
-    applicationDeadline: 'September 30'
+    applicationDeadline: 'September 30',
+    website: 'https://www.uct.ac.za'
   },
   {
     id: 2,
@@ -51,7 +52,8 @@ export const universities: University[] = [
     admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 34-42 depending on the faculty.',
     tuitionRangeFees: 'R45,000 - R70,000 per year',
     accommodationAvailable: true,
-    applicationDeadline: 'September 30'
+    applicationDeadline: 'September 30',
+    website: 'https://www.wits.ac.za'
   },
   {
     id: 3,
@@ -77,7 +79,8 @@ export const universities: University[] = [
     admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 32-38 depending on the program.',
     tuitionRangeFees: 'R40,000 - R60,000 per year',
     accommodationAvailable: true,
-    applicationDeadline: 'June 30'
+    applicationDeadline: 'June 30',
+    website: 'https://www.sun.ac.za'
   },
   {
     id: 4,
@@ -107,7 +110,8 @@ export const universities: University[] = [
     admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 30-35 depending on the faculty.',
     tuitionRangeFees: 'R36,000 - R65,000 per year',
     accommodationAvailable: true,
-    applicationDeadline: 'August 31'
+    applicationDeadline: 'August 31',
+    website: 'https://www.up.ac.za'
   },
   {
     id: 5,

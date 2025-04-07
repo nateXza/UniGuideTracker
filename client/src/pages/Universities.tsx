@@ -2,13 +2,23 @@ import React, { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import UniversityCard from '@/components/UniversityCard';
+import UniversityModal from '@/components/UniversityModal';
 import { useTranslation } from '@/hooks/useTranslation';
 import { universities } from '@/data/universities';
+import { University } from '@/lib/types';
 
 const Universities: React.FC = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedProvince, setSelectedProvince] = useState('all');
+  const [selectedUniversity, setSelectedUniversity] = useState<University | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Function to handle university selection and modal open
+  const handleUniversitySelect = (university: University) => {
+    setSelectedUniversity(university);
+    setIsModalOpen(true);
+  };
 
   // Filter universities based on search term and province
   const filteredUniversities = universities.filter((university) => {
@@ -77,13 +87,26 @@ const Universities: React.FC = () => {
         {filteredUniversities.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredUniversities.map((university) => (
-              <UniversityCard key={university.id} university={university} />
+              <UniversityCard 
+                key={university.id} 
+                university={university} 
+                onClick={() => handleUniversitySelect(university)}
+              />
             ))}
           </div>
         ) : (
           <div className="text-center py-8">
             <p className="text-gray-500">{t('universities.noResults')}</p>
           </div>
+        )}
+        
+        {/* University Detail Modal */}
+        {selectedUniversity && (
+          <UniversityModal
+            university={selectedUniversity}
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+          />
         )}
       </div>
     </section>

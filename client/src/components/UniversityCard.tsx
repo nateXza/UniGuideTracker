@@ -8,9 +8,10 @@ import { University } from '@/lib/types';
 
 interface UniversityCardProps {
   university: University;
+  onClick?: () => void;
 }
 
-const UniversityCard: React.FC<UniversityCardProps> = ({ university }) => {
+const UniversityCard: React.FC<UniversityCardProps> = ({ university, onClick }) => {
   const { t } = useTranslation();
   const [expanded, setExpanded] = useState(false);
   
@@ -139,7 +140,11 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ university }) => {
         >
           {expanded ? t('universities.showLess', 'Show Less') : t('universities.showMore', 'Show More')}
         </Button>
-        <Button variant="default" size="sm">
+        <Button 
+          variant="default" 
+          size="sm" 
+          onClick={onClick}
+        >
           {t('universities.viewDetails', 'View Details')}
         </Button>
       </CardFooter>
