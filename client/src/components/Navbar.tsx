@@ -24,7 +24,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
             <Link href="/" className="flex items-center">
-              <span className="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-800 via-primary-600 to-primary-500 tracking-tight">
+              <span className="text-4xl md:text-5xl font-black text-gray-900 tracking-tight">
                 UniGuide
               </span>
             </Link>
