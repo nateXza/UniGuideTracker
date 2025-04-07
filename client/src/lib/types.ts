@@ -51,6 +51,7 @@ export interface University {
   id: number;
   name: string;
   image: string;
+  logo?: string; // Official university logo
   location: string;
   province: string;
   ratings: UniversityRating;

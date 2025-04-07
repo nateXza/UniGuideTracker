@@ -39,13 +39,13 @@ const UniversityCard: React.FC<UniversityCardProps> = ({ university }) => {
           </div>
         )}
         
-        {/* University Emblem */}
+        {/* University Logo */}
         <div className="absolute -bottom-10 left-6">
           <div className="w-20 h-20 rounded-full bg-white shadow-lg border-4 border-white overflow-hidden flex items-center justify-center">
             <img 
-              src={`https://ui-avatars.com/api/?name=${encodeURIComponent(university.name)}&background=random&color=fff&bold=true&size=80`} 
-              alt={`${university.name} emblem`}
-              className="w-full h-full object-cover"
+              src={university.logo || `https://ui-avatars.com/api/?name=${encodeURIComponent(university.name)}&background=random&color=fff&bold=true&size=80`} 
+              alt={`${university.name} logo`}
+              className="w-full h-full object-contain"
             />
           </div>
         </div>

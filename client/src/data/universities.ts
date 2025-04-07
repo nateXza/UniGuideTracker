@@ -5,6 +5,7 @@ export const universities: University[] = [
     id: 1,
     name: 'University of Cape Town',
     image: 'https://images.unsplash.com/photo-1592280771190-3e2e4d977758?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.uct.ac.za/sites/default/files/image_tool/images/328/about/logo/UCT-round-logo.png',
     location: 'Cape Town',
     province: 'Western Cape',
     ratings: {
@@ -30,6 +31,7 @@ export const universities: University[] = [
     id: 2,
     name: 'University of Witwatersrand',
     image: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.wits.ac.za/media/wits-university/footer/wits-logo.png',
     location: 'Johannesburg',
     province: 'Gauteng',
     ratings: {
@@ -55,6 +57,7 @@ export const universities: University[] = [
     id: 3,
     name: 'Stellenbosch University',
     image: 'https://images.unsplash.com/photo-1534009502677-4c9c27408025?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.sun.ac.za/english/PublishingImages/Lists/dualnav/AllItems/logo-su.png',
     location: 'Stellenbosch',
     province: 'Western Cape',
     ratings: {
@@ -80,6 +83,7 @@ export const universities: University[] = [
     id: 4,
     name: 'University of Pretoria',
     image: 'https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.up.ac.za/themes/up2.0/images/vertical-logo.svg',
     location: 'Pretoria',
     province: 'Gauteng',
     ratings: {
@@ -109,6 +113,7 @@ export const universities: University[] = [
     id: 5,
     name: 'University of KwaZulu-Natal',
     image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.ukzn.ac.za/wp-content/uploads/2017/01/UKZN_logo.png',
     location: 'Durban',
     province: 'KwaZulu-Natal',
     ratings: {
@@ -132,6 +137,7 @@ export const universities: University[] = [
     id: 6,
     name: 'Rhodes University',
     image: 'https://images.unsplash.com/photo-1519452575417-564c1401ecc0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.ru.ac.za/media/rhodesuniversity/content/communicationsandadvancement/images/RUlogoRM.jpg',
     location: 'Grahamstown',
     province: 'Eastern Cape',
     ratings: {
@@ -157,6 +163,7 @@ export const universities: University[] = [
     id: 7,
     name: 'University of Johannesburg',
     image: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.uj.ac.za/wp-content/uploads/2021/10/uj-logo.png',
     location: 'Johannesburg',
     province: 'Gauteng',
     ratings: {
@@ -184,6 +191,7 @@ export const universities: University[] = [
     id: 8,
     name: 'North-West University',
     image: 'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.nwu.ac.za/sites/all/themes/nwu8/images/nwu-logo.png',
     location: 'Potchefstroom',
     province: 'North West',
     ratings: {
@@ -211,6 +219,7 @@ export const universities: University[] = [
     id: 9,
     name: 'University of the Free State',
     image: 'https://images.unsplash.com/photo-1576834967753-06b2018937d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.ufs.ac.za/images/librariesprovider22/default-document-library/ufs-logo.png',
     location: 'Bloemfontein',
     province: 'Free State',
     ratings: {
@@ -237,6 +246,7 @@ export const universities: University[] = [
     id: 10,
     name: 'Nelson Mandela University',
     image: 'https://images.unsplash.com/photo-1571057505848-8a8a55d9293b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.mandela.ac.za/getmedia/e4da9a06-5fa8-4ee8-9b3f-d9af22ee1a99/Nelson-Mandela-University-logo-3-line?width=240&height=92',
     location: 'Port Elizabeth',
     province: 'Eastern Cape',
     ratings: {
@@ -263,6 +273,7 @@ export const universities: University[] = [
     id: 11,
     name: 'University of the Western Cape',
     image: 'https://images.unsplash.com/photo-1557425529-a7a6d83dc78e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.uwc.ac.za/sites/default/files/uwc-logo.png',
     location: 'Cape Town',
     province: 'Western Cape',
     ratings: {
@@ -289,6 +300,7 @@ export const universities: University[] = [
     id: 12,
     name: 'University of Fort Hare',
     image: 'https://images.unsplash.com/photo-1560440021-33f9b67f75b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.ufh.ac.za/files/images/logos/ufh.jpeg',
     location: 'Alice',
     province: 'Eastern Cape',
     ratings: {
@@ -314,6 +326,7 @@ export const universities: University[] = [
     id: 13,
     name: 'Cape Peninsula University of Technology',
     image: 'https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.cput.ac.za/storage/logo/horizontal-logo.png',
     location: 'Cape Town',
     province: 'Western Cape',
     ratings: {
@@ -339,6 +352,7 @@ export const universities: University[] = [
     id: 14,
     name: 'Durban University of Technology',
     image: 'https://images.unsplash.com/photo-1584714268709-c3dd9c92b378?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.dut.ac.za/wp-content/uploads/2021/11/DUT-Logo-Horizontal_0.png',
     location: 'Durban',
     province: 'KwaZulu-Natal',
     ratings: {
@@ -364,6 +378,7 @@ export const universities: University[] = [
     id: 15,
     name: 'University of Limpopo',
     image: 'https://images.unsplash.com/photo-1571260854488-70db8a8479a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    logo: 'https://www.ul.ac.za/application/themes/ul/images/ul-logo.png',
     location: 'Polokwane',
     province: 'Limpopo',
     ratings: {
