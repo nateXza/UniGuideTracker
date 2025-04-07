@@ -23,11 +23,21 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-primary-500 flex items-center justify-center text-white font-bold text-xl">
-                U
+            <Link href="/" className="flex items-center group">
+              <div className="relative">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-primary-600 to-primary-400 flex items-center justify-center text-white font-extrabold text-2xl transform rotate-3 shadow-lg group-hover:rotate-0 transition-transform duration-300">
+                  U<span className="text-yellow-300 absolute top-1 right-1 text-xs">★</span>
+                </div>
+                <div className="absolute inset-0 bg-white bg-opacity-20 rounded-lg scale-110 blur-sm -z-10"></div>
               </div>
-              <span className="ml-2 text-xl font-semibold text-gray-900">UniGuide</span>
+              <div className="ml-2 flex flex-col">
+                <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-700 to-primary-500">
+                  UniGuide
+                </span>
+                <span className="text-[10px] -mt-1 text-gray-600 tracking-wider font-medium">
+                  DISCOVER YOUR PATH
+                </span>
+              </div>
             </Link>
           </div>
           

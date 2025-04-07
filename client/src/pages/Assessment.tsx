@@ -126,7 +126,14 @@ const Assessment: React.FC = () => {
 
   // Calculate overall progress for selected tests
   const calculateProgress = () => {
-    if (currentSection === null) return 0;
+    if (currentSection === null) {
+      return {
+        progressPercentage: 0,
+        questionNumber: 0,
+        totalQuestions: 0,
+        currentSectionQuestions: 0
+      };
+    }
     
     let totalSelectedQuestions = 0;
     let completedQuestions = 0;
@@ -336,9 +343,9 @@ const Assessment: React.FC = () => {
           <div className="mt-4">
             <div className="flex justify-between text-xs text-gray-500 mb-1">
               <span>Overall Progress</span>
-              <span>{Math.round(progress.progressPercentage)}%</span>
+              <span>{Math.round(progress?.progressPercentage || 0)}%</span>
             </div>
-            <Progress value={progress.progressPercentage} className="h-2" />
+            <Progress value={progress?.progressPercentage || 0} className="h-2" />
           </div>
         </div>
 

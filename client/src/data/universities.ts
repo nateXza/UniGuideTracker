@@ -11,7 +11,7 @@ export const universities: University[] = [
       studentSatisfaction: 4.5,
       academicExcellence: 4.8
     },
-    tags: ['Top Ranked', 'Financial Aid'],
+    tags: ['Top Ranked', 'Financial Aid', 'Research Excellence'],
     programsOffered: [
       'Medicine and Health Sciences',
       'Engineering and Technology',
@@ -36,7 +36,7 @@ export const universities: University[] = [
       studentSatisfaction: 4.3,
       academicExcellence: 4.7
     },
-    tags: ['Research Focus', 'Scholarships'],
+    tags: ['Research Focus', 'Scholarships', 'Urban Campus'],
     programsOffered: [
       'Engineering',
       'Medicine',
@@ -61,7 +61,7 @@ export const universities: University[] = [
       studentSatisfaction: 4.6,
       academicExcellence: 4.5
     },
-    tags: ['Historic', 'NSFAS Approved'],
+    tags: ['Historic', 'NSFAS Approved', 'Scenic Campus'],
     programsOffered: [
       'Agriculture',
       'Arts and Social Sciences',
@@ -86,7 +86,7 @@ export const universities: University[] = [
       studentSatisfaction: 4.2,
       academicExcellence: 4.4
     },
-    tags: ['Research Intensive', 'Sports Excellence'],
+    tags: ['Research Intensive', 'Sports Excellence', 'Diverse Programs'],
     programsOffered: [
       'Economic and Management Sciences',
       'Engineering',
@@ -115,7 +115,7 @@ export const universities: University[] = [
       studentSatisfaction: 4.0,
       academicExcellence: 4.1
     },
-    tags: ['Multi-campus', 'NSFAS Approved'],
+    tags: ['Multi-campus', 'NSFAS Approved', 'Cultural Diversity'],
     programsOffered: [
       'Agriculture, Engineering and Science',
       'Health Sciences',
@@ -138,7 +138,7 @@ export const universities: University[] = [
       studentSatisfaction: 4.7,
       academicExcellence: 4.3
     },
-    tags: ['Small Classes', 'Community Focused'],
+    tags: ['Small Classes', 'Community Focused', 'High Pass Rates'],
     programsOffered: [
       'Commerce',
       'Education',
@@ -152,5 +152,235 @@ export const universities: University[] = [
     tuitionRangeFees: 'R40,000 - R55,000 per year',
     accommodationAvailable: true,
     applicationDeadline: 'August 1'
+  },
+  {
+    id: 7,
+    name: 'University of Johannesburg',
+    image: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Johannesburg',
+    province: 'Gauteng',
+    ratings: {
+      studentSatisfaction: 4.1,
+      academicExcellence: 4.0
+    },
+    tags: ['Technology Focus', 'NSFAS Approved', 'Industry Connections'],
+    programsOffered: [
+      'Art, Design and Architecture',
+      'Business and Economics',
+      'Education',
+      'Engineering and the Built Environment',
+      'Health Sciences',
+      'Humanities',
+      'Law',
+      'Science'
+    ],
+    description: 'UJ is a comprehensive university that embraces the 4th Industrial Revolution, offering industry-relevant programs.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 26-34 depending on the faculty.',
+    tuitionRangeFees: 'R35,000 - R55,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 30'
+  },
+  {
+    id: 8,
+    name: 'North-West University',
+    image: 'https://images.unsplash.com/photo-1591123120675-6f7f1aae0e5b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Potchefstroom',
+    province: 'North West',
+    ratings: {
+      studentSatisfaction: 4.2,
+      academicExcellence: 4.0
+    },
+    tags: ['Multilingual', 'Affordability', 'NSFAS Approved'],
+    programsOffered: [
+      'Commerce and Administration',
+      'Education',
+      'Engineering',
+      'Health Sciences',
+      'Humanities',
+      'Law',
+      'Natural and Agricultural Sciences',
+      'Theology'
+    ],
+    description: 'NWU is known for its multilingual approach to education, with campuses in Potchefstroom, Vanderbijlpark, and Mahikeng.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 25-30 depending on the program.',
+    tuitionRangeFees: 'R30,000 - R50,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 30'
+  },
+  {
+    id: 9,
+    name: 'University of the Free State',
+    image: 'https://images.unsplash.com/photo-1576834967753-06b2018937d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Bloemfontein',
+    province: 'Free State',
+    ratings: {
+      studentSatisfaction: 4.0,
+      academicExcellence: 3.9
+    },
+    tags: ['Affordable Tuition', 'NSFAS Approved', 'Student Support'],
+    programsOffered: [
+      'Economic and Management Sciences',
+      'Education',
+      'Health Sciences',
+      'Humanities',
+      'Law',
+      'Natural and Agricultural Sciences',
+      'Theology and Religion'
+    ],
+    description: 'UFS provides quality education in a supportive environment with a focus on academic excellence and student success.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 30 points.',
+    tuitionRangeFees: 'R25,000 - R45,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 30'
+  },
+  {
+    id: 10,
+    name: 'Nelson Mandela University',
+    image: 'https://images.unsplash.com/photo-1571057505848-8a8a55d9293b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Port Elizabeth',
+    province: 'Eastern Cape',
+    ratings: {
+      studentSatisfaction: 4.2,
+      academicExcellence: 3.9
+    },
+    tags: ['Ocean Sciences', 'NSFAS Approved', 'Environmental Focus'],
+    programsOffered: [
+      'Arts',
+      'Business and Economic Sciences',
+      'Education',
+      'Engineering, the Built Environment and Technology',
+      'Health Sciences',
+      'Law',
+      'Science'
+    ],
+    description: 'Named after Nelson Mandela, this university is committed to creating sustainable futures, with a strong focus on marine and coastal studies.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 26-34 depending on the qualification.',
+    tuitionRangeFees: 'R30,000 - R50,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'August 1'
+  },
+  {
+    id: 11,
+    name: 'University of the Western Cape',
+    image: 'https://images.unsplash.com/photo-1557425529-a7a6d83dc78e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Cape Town',
+    province: 'Western Cape',
+    ratings: {
+      studentSatisfaction: 3.9,
+      academicExcellence: 4.0
+    },
+    tags: ['Inclusive Education', 'NSFAS Approved', 'Research Innovation'],
+    programsOffered: [
+      'Arts',
+      'Community and Health Sciences',
+      'Dentistry',
+      'Economic and Management Sciences',
+      'Education',
+      'Law',
+      'Natural Sciences'
+    ],
+    description: 'UWC has a history of creative struggle against oppression, discrimination, and disadvantage, with a commitment to diversity and inclusion.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 27-30 depending on the faculty.',
+    tuitionRangeFees: 'R30,000 - R45,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 30'
+  },
+  {
+    id: 12,
+    name: 'University of Fort Hare',
+    image: 'https://images.unsplash.com/photo-1560440021-33f9b67f75b9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Alice',
+    province: 'Eastern Cape',
+    ratings: {
+      studentSatisfaction: 3.7,
+      academicExcellence: 3.8
+    },
+    tags: ['Historic Legacy', 'NSFAS Approved', 'Rural Development'],
+    programsOffered: [
+      'Education',
+      'Health Sciences',
+      'Humanities and Social Sciences',
+      'Law',
+      'Management and Commerce',
+      'Science and Agriculture'
+    ],
+    description: 'With a rich history of producing African leaders, UFH is one of the oldest historically black universities in South Africa.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 25-30 depending on the program.',
+    tuitionRangeFees: 'R25,000 - R40,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'October 31'
+  },
+  {
+    id: 13,
+    name: 'Cape Peninsula University of Technology',
+    image: 'https://images.unsplash.com/photo-1561089489-f13d5e730d72?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Cape Town',
+    province: 'Western Cape',
+    ratings: {
+      studentSatisfaction: 3.8,
+      academicExcellence: 3.7
+    },
+    tags: ['Technology Focus', 'NSFAS Approved', 'Practical Training'],
+    programsOffered: [
+      'Applied Sciences',
+      'Business and Management Sciences',
+      'Education',
+      'Engineering',
+      'Health and Wellness Sciences',
+      'Informatics and Design'
+    ],
+    description: 'CPUT is the only university of technology in the Western Cape, emphasizing hands-on, career-focused education.',
+    admissionRequirements: 'Diploma Pass or Bachelor\'s Pass with specific subject requirements.',
+    tuitionRangeFees: 'R25,000 - R45,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 30'
+  },
+  {
+    id: 14,
+    name: 'Durban University of Technology',
+    image: 'https://images.unsplash.com/photo-1584714268709-c3dd9c92b378?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Durban',
+    province: 'KwaZulu-Natal',
+    ratings: {
+      studentSatisfaction: 3.7,
+      academicExcellence: 3.6
+    },
+    tags: ['Industry Partnerships', 'NSFAS Approved', 'Urban Campus'],
+    programsOffered: [
+      'Accounting and Informatics',
+      'Applied Sciences',
+      'Arts and Design',
+      'Engineering and the Built Environment',
+      'Health Sciences',
+      'Management Sciences'
+    ],
+    description: 'DUT focuses on developing career-ready graduates with strong industry connections and practical training.',
+    admissionRequirements: 'Diploma Pass or Bachelor\'s Pass with an APS score of at least 20-30 depending on the program.',
+    tuitionRangeFees: 'R20,000 - R40,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 24'
+  },
+  {
+    id: 15,
+    name: 'University of Limpopo',
+    image: 'https://images.unsplash.com/photo-1571260854488-70db8a8479a5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    location: 'Polokwane',
+    province: 'Limpopo',
+    ratings: {
+      studentSatisfaction: 3.6,
+      academicExcellence: 3.5
+    },
+    tags: ['Rural Development', 'NSFAS Approved', 'Affordable'],
+    programsOffered: [
+      'Health Sciences',
+      'Humanities',
+      'Management and Law',
+      'Science and Agriculture'
+    ],
+    description: 'UL is committed to finding solutions to rural development through innovative teaching and research.',
+    admissionRequirements: 'Bachelor\'s Pass with an APS score of at least 26-30 depending on the program.',
+    tuitionRangeFees: 'R20,000 - R40,000 per year',
+    accommodationAvailable: true,
+    applicationDeadline: 'September 30'
   }
 ];
