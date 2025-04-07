@@ -145,6 +145,9 @@ const Footer: React.FC = () => {
             <Link href="/cookies">
               <a className="hover:text-white">{t('footer.cookiePolicy')}</a>
             </Link>
+            <Link href="/website-map">
+              <a className="hover:text-white">{t('footer.siteMap', 'Site Map')}</a>
+            </Link>
           </div>
         </div>
       </div>
