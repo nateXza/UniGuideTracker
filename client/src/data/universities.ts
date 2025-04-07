@@ -5,7 +5,7 @@ export const universities: University[] = [
     id: 1,
     name: 'University of Cape Town',
     image: 'https://images.unsplash.com/photo-1592280771190-3e2e4d977758?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    logo: 'https://www.uct.ac.za/sites/default/files/image_tool/images/328/about/logo/UCT-round-logo.png',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/University_of_Cape_Town_logo.svg/1200px-University_of_Cape_Town_logo.svg.png',
     location: 'Cape Town',
     province: 'Western Cape',
     ratings: {
@@ -31,7 +31,7 @@ export const universities: University[] = [
     id: 2,
     name: 'University of Witwatersrand',
     image: 'https://images.unsplash.com/photo-1544531586-fde5298cdd40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    logo: 'https://www.wits.ac.za/media/wits-university/footer/wits-logo.png',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/c/c7/Logo_for_the_University_of_the_Witwatersrand%2C_Johannesburg_%28new_logo_as_of_2015%29.jpg',
     location: 'Johannesburg',
     province: 'Gauteng',
     ratings: {
@@ -57,7 +57,7 @@ export const universities: University[] = [
     id: 3,
     name: 'Stellenbosch University',
     image: 'https://images.unsplash.com/photo-1534009502677-4c9c27408025?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    logo: 'https://www.sun.ac.za/english/PublishingImages/Lists/dualnav/AllItems/logo-su.png',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/SU_Logo_Centered.svg/1200px-SU_Logo_Centered.svg.png',
     location: 'Stellenbosch',
     province: 'Western Cape',
     ratings: {
@@ -83,7 +83,7 @@ export const universities: University[] = [
     id: 4,
     name: 'University of Pretoria',
     image: 'https://images.unsplash.com/photo-1590012314607-cda9d9b699ae?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    logo: 'https://www.up.ac.za/themes/up2.0/images/vertical-logo.svg',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/3/35/University_of_Pretoria_seal.svg/1200px-University_of_Pretoria_seal.svg.png',
     location: 'Pretoria',
     province: 'Gauteng',
     ratings: {
@@ -113,7 +113,7 @@ export const universities: University[] = [
     id: 5,
     name: 'University of KwaZulu-Natal',
     image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
-    logo: 'https://www.ukzn.ac.za/wp-content/uploads/2017/01/UKZN_logo.png',
+    logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/University_of_KwaZulu-Natal_logo.svg/1200px-University_of_KwaZulu-Natal_logo.svg.png',
     location: 'Durban',
     province: 'KwaZulu-Natal',
     ratings: {
