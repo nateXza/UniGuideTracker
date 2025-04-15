@@ -70,6 +70,37 @@ export const tvetColleges = pgTable("tvet_colleges", {
   applicationDeadlines: jsonb("application_deadlines").$type<{
     semester1: string;
     semester2: string;
+
+// Private colleges table
+export const privateColleges = pgTable("private_colleges", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  locations: jsonb("locations").$type<string[]>(),
+  website: text("website"),
+  logo: text("logo"),
+  description: text("description").notNull(),
+  faculties: jsonb("faculties").$type<string[]>(),
+  programs: jsonb("programs").$type<{
+    name: string;
+    duration: string;
+    level: string;
+    requirements: string;
+    description: string;
+  }[]>(),
+  applicationDeadlines: jsonb("application_deadlines").$type<{
+    semester1: string;
+    semester2: string;
+  }>(),
+  studentSupport: jsonb("student_support").$type<string[]>(),
+  accommodationAvailable: boolean("accommodation_available").default(false),
+  fees: jsonb("fees").$type<{
+    annual: string;
+    registration: string;
+  }>(),
+});
+
+export type PrivateCollege = typeof privateColleges.$inferSelect;
+
   }>(),
   studentSupport: jsonb("student_support").$type<string[]>(),
   accommodationAvailable: boolean("accommodation_available").default(false),
