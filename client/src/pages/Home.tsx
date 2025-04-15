@@ -12,16 +12,16 @@ const Home: React.FC = () => {
   const { t } = useTranslation();
   const [selectedUniversity, setSelectedUniversity] = useState<University | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  
+
   // Function to handle university selection and modal open
   const handleUniversitySelect = (university: University) => {
     setSelectedUniversity(university);
     setIsModalOpen(true);
   };
-  
+
   // Featured universities (top 3)
   const featuredUniversities = universities.slice(0, 3);
-  
+
   // Testimonials data
   const testimonials = [
     {
@@ -67,7 +67,7 @@ const Home: React.FC = () => {
               </p>
               <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4">
                 <Button asChild size="lg" className="mb-3 sm:mb-0 bg-gradient-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-indigo-800">
-                  <Link href="/profile">
+                  <Link href="/login">
                     {t('home.hero.startJourney')}
                   </Link>
                 </Button>
@@ -215,7 +215,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-      
+
       {/* University Detail Modal */}
       {selectedUniversity && (
         <UniversityModal

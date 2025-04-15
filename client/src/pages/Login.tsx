@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -13,147 +14,250 @@ import {
   FormLabel,
   FormMessage,
 } from '@/components/ui/form';
-import { Checkbox } from '@/components/ui/checkbox';
+import { 
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { useTranslation } from '@/hooks/useTranslation';
-import { loginSchema } from '@shared/schema';
+import { loginSchema, registerUserSchema } from '@shared/schema';
 import { useToast } from '@/hooks/use-toast';
 
-// Create a custom schema for the login form
-const formSchema = z.object({
-  username: z.string().email({ message: "Please enter a valid email address" }),
-  password: z.string().min(6, { message: "Password must be at least 6 characters" }),
-  rememberMe: z.boolean().optional(),
-});
-
-type FormValues = z.infer<typeof formSchema>;
+type LoginFormValues = z.infer<typeof loginSchema>;
+type RegisterFormValues = z.infer<typeof registerUserSchema>;
 
 const Login: React.FC = () => {
   const { t } = useTranslation();
-  const [location, setLocation] = useLocation();
+  const [, setLocation] = useLocation();
   const { toast } = useToast();
   
-  const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema),
+  const loginForm = useForm<LoginFormValues>({
+    resolver: zodResolver(loginSchema),
     defaultValues: {
       username: '',
       password: '',
-      rememberMe: false,
     },
   });
 
-  const onSubmit = async (values: FormValues) => {
+  const registerForm = useForm<RegisterFormValues>({
+    resolver: zodResolver(registerUserSchema),
+    defaultValues: {
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      firstName: '',
+      lastName: '',
+    },
+  });
+
+  const onLogin = async (values: LoginFormValues) => {
     try {
-      // In a real implementation, this would make an API call to authenticate
-      console.log('Login submitted:', values);
-      
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Login failed');
+      }
+
       toast({
         title: t('login.success', 'Login successful!'),
         description: t('login.redirecting', 'Redirecting to your profile...'),
       });
       
-      // Simulate a delay before redirecting
-      setTimeout(() => {
-        setLocation('/profile');
-      }, 1500);
+      setTimeout(() => setLocation('/profile'), 1500);
     } catch (error) {
-      console.error('Login error:', error);
       toast({
         variant: 'destructive',
         title: t('login.error', 'Login failed'),
-        description: t('login.errorMessage', 'Please check your email and password and try again.'),
+        description: t('login.errorMessage', 'Please check your credentials and try again.'),
+      });
+    }
+  };
+
+  const onRegister = async (values: RegisterFormValues) => {
+    try {
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        throw new Error('Registration failed');
+      }
+
+      toast({
+        title: t('register.success', 'Registration successful!'),
+        description: t('register.redirecting', 'Please log in with your new account.'),
+      });
+    } catch (error) {
+      toast({
+        variant: 'destructive',
+        title: t('register.error', 'Registration failed'),
+        description: t('register.errorMessage', 'Please try again with different credentials.'),
       });
     }
   };
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <div className="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden p-8">
-        <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">
-            {t('login.title', 'Welcome Back')}
-          </h1>
-          <p className="text-gray-600 mt-2">
-            {t('login.subtitle', 'Sign in to your UniGuide account')}
-          </p>
-        </div>
-        
-        <Form {...form}>
-          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('login.emailLabel', 'Email')}</FormLabel>
-                  <FormControl>
-                    <Input 
-                      type="email" 
-                      placeholder={t('login.emailPlaceholder', 'name@example.com')} 
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+      <Card className="max-w-md mx-auto">
+        <CardHeader className="space-y-1 text-center">
+          <CardTitle className="text-3xl font-bold">
+            {t('login.welcome', 'Welcome to UniGuide')}
+          </CardTitle>
+          <CardDescription>
+            {t('login.chooseOption', 'Choose your option below')}
+          </CardDescription>
+        </CardHeader>
+        <CardContent>
+          <Tabs defaultValue="login" className="space-y-4">
+            <TabsList className="grid w-full grid-cols-2">
+              <TabsTrigger value="login">{t('login.login', 'Login')}</TabsTrigger>
+              <TabsTrigger value="register">{t('login.register', 'Register')}</TabsTrigger>
+            </TabsList>
             
-            <FormField
-              control={form.control}
-              name="password"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>{t('login.passwordLabel', 'Password')}</FormLabel>
-                  <FormControl>
-                    <Input 
-                      type="password" 
-                      placeholder={t('login.passwordPlaceholder', '••••••••')} 
-                      {...field} 
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+            <TabsContent value="login">
+              <Form {...loginForm}>
+                <form onSubmit={loginForm.handleSubmit(onLogin)} className="space-y-4">
+                  <FormField
+                    control={loginForm.control}
+                    name="username"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('login.username', 'Username')}</FormLabel>
+                        <FormControl>
+                          <Input {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={loginForm.control}
+                    name="password"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('login.password', 'Password')}</FormLabel>
+                        <FormControl>
+                          <Input type="password" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-indigo-700">
+                    {t('login.loginButton', 'Login')}
+                  </Button>
+                </form>
+              </Form>
+            </TabsContent>
             
-            <div className="flex items-center justify-between">
-              <FormField
-                control={form.control}
-                name="rememberMe"
-                render={({ field }) => (
-                  <FormItem className="flex flex-row items-center space-x-2 space-y-0">
-                    <FormControl>
-                      <Checkbox 
-                        checked={field.value} 
-                        onCheckedChange={field.onChange}
-                      />
-                    </FormControl>
-                    <FormLabel className="text-sm font-medium cursor-pointer">
-                      {t('login.rememberMe', 'Remember me')}
-                    </FormLabel>
-                  </FormItem>
-                )}
-              />
-              
-              <Link href="/forgot-password" className="text-sm font-medium text-primary-600 hover:text-primary-500">
-                {t('login.forgotPassword', 'Forgot password?')}
-              </Link>
-            </div>
-            
-            <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-indigo-700">
-              {t('login.signIn', 'Sign in')}
-            </Button>
-          </form>
-        </Form>
-        
-        <div className="mt-6 text-center">
-          <p className="text-sm text-gray-600">
-            {t('login.noAccount', 'Don\'t have an account?')}{' '}
-            <Link href="/profile" className="font-medium text-primary-600 hover:text-primary-500">
-              {t('login.createAccount', 'Create one now')}
-            </Link>
-          </p>
-        </div>
-      </div>
+            <TabsContent value="register">
+              <Form {...registerForm}>
+                <form onSubmit={registerForm.handleSubmit(onRegister)} className="space-y-4">
+                  <FormField
+                    control={registerForm.control}
+                    name="firstName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('register.firstName', 'First Name')}</FormLabel>
+                        <FormControl>
+                          <Input {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={registerForm.control}
+                    name="lastName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('register.lastName', 'Last Name')}</FormLabel>
+                        <FormControl>
+                          <Input {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={registerForm.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('register.email', 'Email')}</FormLabel>
+                        <FormControl>
+                          <Input type="email" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={registerForm.control}
+                    name="username"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('register.username', 'Username')}</FormLabel>
+                        <FormControl>
+                          <Input {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={registerForm.control}
+                    name="password"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('register.password', 'Password')}</FormLabel>
+                        <FormControl>
+                          <Input type="password" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <FormField
+                    control={registerForm.control}
+                    name="confirmPassword"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel>{t('register.confirmPassword', 'Confirm Password')}</FormLabel>
+                        <FormControl>
+                          <Input type="password" {...field} />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  
+                  <Button type="submit" className="w-full bg-gradient-to-r from-blue-600 to-indigo-700">
+                    {t('register.registerButton', 'Register')}
+                  </Button>
+                </form>
+              </Form>
+            </TabsContent>
+          </Tabs>
+        </CardContent>
+      </Card>
     </div>
   );
 };
