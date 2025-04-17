@@ -60,10 +60,12 @@ function Router() {
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <ProfileProvider>
-        <Router />
-        <Toaster />
-      </ProfileProvider>
+      <ThemeProvider defaultTheme="light">
+        <ProfileProvider>
+          <Router />
+          <Toaster />
+        </ProfileProvider>
+      </ThemeProvider>
     </QueryClientProvider>
   );
 }

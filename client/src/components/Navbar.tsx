@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import LanguageSelector from "./LanguageSelector";
 import MobileMenu from "./MobileMenu";
 import { useTranslation } from "@/hooks/useTranslation";
+import { ThemeToggle } from "./ThemeToggle"; // Added import for ThemeToggle
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar: React.FC = () => {
               </span>
             </Link>
           </div>
-          
+
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8 items-center">
             <Link href="/" className={`${isActive("/") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
@@ -47,9 +48,10 @@ const Navbar: React.FC = () => {
             <Link href="/about" className={`${isActive("/about") ? "text-primary-600" : "text-gray-700"} hover:text-primary-600 font-medium`}>
               {t("nav.about")}
             </Link>
+            <ThemeToggle /> {/* Added ThemeToggle component */}
             <LanguageSelector />
           </nav>
-          
+
           <div className="hidden md:flex items-center space-x-3">
             <Button variant="outline" asChild>
               <Link href="/login">{t("nav.signIn")}</Link>
@@ -58,7 +60,7 @@ const Navbar: React.FC = () => {
               <Link href="/profile">{t("nav.getStarted")}</Link>
             </Button>
           </div>
-          
+
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button 
@@ -74,7 +76,7 @@ const Navbar: React.FC = () => {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile menu */}
       {isMobileMenuOpen && <MobileMenu onClose={toggleMobileMenu} />}
     </header>
