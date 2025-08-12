@@ -360,5 +360,265 @@ export const tvetColleges: TvetCollege[] = [
     media: false,
     safety: false,
     tourism: false,
+  },
+  {
+    id: 7,
+    name: "Central Johannesburg TVET College",
+    province: "Gauteng",
+    location: "Johannesburg",
+    website: "https://www.cjc.edu.za",
+    logo: "/images/tvet-colleges/central-johannesburg-logo.svg",
+    description: "Central Johannesburg TVET College serves the vibrant heart of Johannesburg, offering industry-relevant programs designed to meet the skills demands of South Africa's economic hub.",
+    campuses: [
+      "Alexandra",
+      "Braamfontein",
+      "Johannesburg CBD",
+      "Roodepoort",
+      "Soweto"
+    ],
+    programs: [
+      {
+        name: "National Certificate (Vocational) in Information Technology & Computer Science",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and English",
+        description: "Comprehensive IT training covering programming, networking, and systems administration for the digital economy."
+      },
+      {
+        name: "National Certificate (Vocational) in Business Studies",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Business Studies",
+        description: "Business fundamentals, entrepreneurship, and management skills for modern commerce."
+      },
+      {
+        name: "National Certificate (Vocational) in Engineering & Related Design",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Engineering design, manufacturing processes, and technical drawing for industrial careers."
+      },
+      {
+        name: "National Certificate (Vocational) in Tourism",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Geography and English",
+        description: "Tourism operations, travel services, and hospitality management for the growing tourism sector."
+      }
+    ],
+    applicationDeadlines: {
+      semester1: "December 31",
+      semester2: "June 30"
+    },
+    studentSupport: ["Career Services", "Academic Mentoring", "Financial Aid", "Industry Partnerships"],
+    accommodationAvailable: false,
+    fees: {
+      nationalCertificate: "R15,000 - R22,000 per year",
+      diploma: "R22,000 - R30,000 per year"
+    },
+    artisanPrograms: true,
+    businessPrograms: true,
+    engineeringPrograms: true,
+    itPrograms: true,
+    hospitalityPrograms: false,
+    agriculture: false,
+    media: false,
+    safety: false,
+    tourism: true,
+  },
+  {
+    id: 8,
+    name: "Coastal KZN TVET College",
+    province: "KwaZulu-Natal",
+    location: "Durban",
+    website: "https://www.coastalkzn.edu.za",
+    logo: "/images/tvet-colleges/coastal-kzn-logo.svg",
+    description: "Coastal KZN TVET College leverages the strategic coastal location to offer specialized maritime, logistics, and traditional technical programs serving the Port of Durban and surrounding industries.",
+    campuses: [
+      "Durban Central",
+      "Umlazi",
+      "Pinetown",
+      "Chatsworth",
+      "Isipingo"
+    ],
+    programs: [
+      {
+        name: "National Certificate (Vocational) in Maritime Studies",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Specialized training for maritime careers including port operations, shipping, and marine engineering."
+      },
+      {
+        name: "National Certificate (Vocational) in Logistics",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Business Studies",
+        description: "Supply chain management, warehousing, and transportation logistics for the freight industry."
+      },
+      {
+        name: "National Certificate (Vocational) in Hospitality & Catering",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with good communication skills",
+        description: "Culinary arts, hotel management, and food service operations for the tourism industry."
+      },
+      {
+        name: "National Certificate (Vocational) in Electrical Infrastructure Construction",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Electrical installation, maintenance, and infrastructure development for industrial applications."
+      }
+    ],
+    applicationDeadlines: {
+      semester1: "November 30",
+      semester2: "May 31"
+    },
+    studentSupport: ["Career Placement", "Skills Development", "Industry Training", "Port Internships"],
+    accommodationAvailable: true,
+    fees: {
+      nationalCertificate: "R13,000 - R19,000 per year",
+      diploma: "R19,000 - R26,000 per year"
+    },
+    artisanPrograms: true,
+    businessPrograms: true,
+    engineeringPrograms: true,
+    itPrograms: false,
+    hospitalityPrograms: true,
+    agriculture: false,
+    media: false,
+    safety: true,
+    tourism: true,
+  },
+  {
+    id: 9,
+    name: "Eastcape Midlands TVET College",
+    province: "Eastern Cape",
+    location: "Graaff-Reinet",
+    website: "https://www.emcollege.edu.za",
+    logo: "/images/tvet-colleges/eastcape-midlands-logo.svg",
+    description: "Eastcape Midlands TVET College serves the rural heartland of the Eastern Cape, focusing on agricultural development, renewable energy, and community-based technical education.",
+    campuses: [
+      "Graaff-Reinet",
+      "Cradock",
+      "Somerset East",
+      "Pearston",
+      "Aberdeen"
+    ],
+    programs: [
+      {
+        name: "National Certificate (Vocational) in Agriculture",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Life Sciences and Mathematics",
+        description: "Sustainable farming practices, livestock management, and agricultural technology for rural development."
+      },
+      {
+        name: "National Certificate (Vocational) in Renewable Energy",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Solar energy systems, wind power technology, and sustainable energy solutions."
+      },
+      {
+        name: "National Certificate (Vocational) in Civil Engineering & Building Construction",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Construction techniques, project management, and infrastructure development."
+      },
+      {
+        name: "National Certificate (Vocational) in Automotive Repair & Maintenance",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Vehicle maintenance, diagnostic techniques, and automotive technology for rural transport needs."
+      }
+    ],
+    applicationDeadlines: {
+      semester1: "November 15",
+      semester2: "May 15"
+    },
+    studentSupport: ["Rural Development Programs", "Agricultural Extension", "Entrepreneurship Support", "Community Outreach"],
+    accommodationAvailable: true,
+    fees: {
+      nationalCertificate: "R8,000 - R14,000 per year",
+      diploma: "R14,000 - R20,000 per year"
+    },
+    artisanPrograms: true,
+    businessPrograms: false,
+    engineeringPrograms: true,
+    itPrograms: false,
+    hospitalityPrograms: false,
+    agriculture: true,
+    media: false,
+    safety: false,
+    tourism: false,
+  },
+  {
+    id: 10,
+    name: "Capricorn TVET College",
+    province: "Limpopo",
+    location: "Polokwane",
+    website: "https://www.capricorncollege.edu.za",
+    logo: "/images/tvet-colleges/capricorn-logo.svg",
+    description: "Capricorn TVET College serves the Limpopo province with programs focused on mining, agriculture, and rural development, preparing students for careers in key regional industries.",
+    campuses: [
+      "Polokwane",
+      "Seshego",
+      "Mankweng",
+      "Tzaneen",
+      "Giyani"
+    ],
+    programs: [
+      {
+        name: "National Certificate (Vocational) in Mining",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Mathematics and Science",
+        description: "Mining operations, safety procedures, and mineral processing for the platinum and other mining industries."
+      },
+      {
+        name: "National Certificate (Vocational) in Agriculture",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Life Sciences",
+        description: "Crop production, irrigation systems, and farm management for commercial and subsistence agriculture."
+      },
+      {
+        name: "National Certificate (Vocational) in Primary Health Care",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with Life Sciences and English",
+        description: "Community health care, basic nursing skills, and health promotion for rural communities."
+      },
+      {
+        name: "National Certificate (Vocational) in Office Administration",
+        duration: "3 years full-time",
+        level: "NQF 4",
+        requirements: "Grade 9 with English and Mathematics",
+        description: "Administrative skills, computer literacy, and business communication for government and private sector."
+      }
+    ],
+    applicationDeadlines: {
+      semester1: "November 30",
+      semester2: "May 31"
+    },
+    studentSupport: ["Mining Industry Partnerships", "Health Care Placements", "Agricultural Extension", "Language Support"],
+    accommodationAvailable: true,
+    fees: {
+      nationalCertificate: "R9,000 - R15,000 per year",
+      diploma: "R15,000 - R22,000 per year"
+    },
+    artisanPrograms: true,
+    businessPrograms: true,
+    engineeringPrograms: false,
+    itPrograms: false,
+    hospitalityPrograms: false,
+    agriculture: true,
+    media: false,
+    safety: true,
+    tourism: false,
   }
 ];

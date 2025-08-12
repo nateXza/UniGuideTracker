@@ -34,8 +34,8 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[900px] max-h-[90vh] overflow-hidden flex flex-col">
-        <DialogHeader>
+      <DialogContent className="sm:max-w-[900px] max-h-[90vh] overflow-hidden flex flex-col p-0">
+        <DialogHeader className="px-6 pt-6 pb-2 flex-shrink-0">
           <div className="flex justify-between items-center">
             <div>
               <DialogTitle className="text-2xl font-bold">{college.name}</DialogTitle>
@@ -56,15 +56,15 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
           </div>
         </DialogHeader>
 
-        <Tabs defaultValue="overview" className="flex-1 flex flex-col min-h-0">
-          <TabsList className="grid grid-cols-4 mb-4">
+        <Tabs defaultValue="overview" className="flex-1 flex flex-col min-h-0 px-6">
+          <TabsList className="grid grid-cols-4 mb-4 flex-shrink-0">
             <TabsTrigger value="overview">{t('tvetColleges.overview')}</TabsTrigger>
             <TabsTrigger value="programs">{t('tvetColleges.programs')}</TabsTrigger>
             <TabsTrigger value="campuses">{t('tvetColleges.campuses')}</TabsTrigger>
             <TabsTrigger value="application">{t('tvetColleges.application')}</TabsTrigger>
           </TabsList>
 
-          <ScrollArea className="flex-1">
+          <ScrollArea className="flex-1 -mx-6 px-6">
             <TabsContent value="overview" className="mt-0 space-y-4">
               <div>
                 <h3 className="text-lg font-semibold mb-2">{t('tvetColleges.about')}</h3>
@@ -205,7 +205,7 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
           </ScrollArea>
         </Tabs>
 
-        <DialogFooter className="sm:justify-between">
+        <DialogFooter className="sm:justify-between px-6 py-4 flex-shrink-0 border-t">
           <div className="flex items-center gap-2">
             <BookOpen className="h-5 w-5 text-gray-500" />
             <span className="text-sm text-gray-700">

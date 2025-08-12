@@ -79,11 +79,17 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="mt-10 lg:mt-0 lg:w-1/2">
-              <img 
-                className="h-auto w-full object-cover rounded-lg shadow-xl" 
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
-                alt={t('home.hero.imageAlt')} 
-              />
+              <div className="relative bg-gradient-to-br from-blue-100 to-indigo-200 rounded-lg shadow-xl p-8 h-96 flex items-center justify-center">
+                <div className="text-center">
+                  <div className="w-24 h-24 mx-auto mb-4 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center">
+                    <svg className="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Your Educational Journey</h3>
+                  <p className="text-gray-600">Discover universities, TVET colleges, and career paths tailored for you</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

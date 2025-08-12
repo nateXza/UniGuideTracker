@@ -47,10 +47,16 @@ The application follows a full-stack JavaScript architecture:
 6. **Application Management**: Guided application timelines and milestones
 
 ## Recent Changes
-- **2025-01-12**: Fixed syntax error in schema.ts that was preventing application startup
-  - Resolved incomplete object definition in TVET college schema
-  - Removed duplicate type definitions
-  - Application now running successfully on port 5000
+- **2025-01-12**: Major fixes and improvements to UniGuide platform
+  - Fixed syntax error in schema.ts preventing app startup
+  - Resolved Select component runtime error in TVET Colleges page (empty value issue)
+  - Replaced broken home page hero image with custom SVG illustration
+  - Improved TVET college modal scrollability and layout
+  - Added 4 new TVET colleges: Central Johannesburg, Coastal KZN, Eastcape Midlands, Capricorn
+  - Created custom SVG logos for all new TVET colleges
+  - Fixed broken Unsplash image URLs in university and blog data
+  - Enhanced database from 6 to 10 TVET colleges with comprehensive program information
+  - Application running successfully on port 5000 with all features functional
 
 ## User Preferences
 *To be documented based on user interactions*
