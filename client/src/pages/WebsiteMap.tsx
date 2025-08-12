@@ -27,39 +27,46 @@ const WebsiteMap: React.FC = () => {
               </div>
               
               {/* Primary navigation level */}
-              <div className="w-0.5 h-8 bg-gray-300"></div>
+              <div className="w-0.5 h-8 bg-border"></div>
               
               <div className="flex justify-center mb-8">
-                <div className="w-[1000px] h-0.5 bg-gray-300"></div>
+                <div className="w-[1000px] h-0.5 bg-border"></div>
               </div>
               
               <div className="flex justify-between w-full mb-8">
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="p-3 bg-blue-100 text-blue-800 rounded-lg shadow-md mb-2">
                     <Link href="/about">About</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="p-3 bg-blue-100 text-blue-800 rounded-lg shadow-md mb-2">
                     <Link href="/universities">Universities</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-3 bg-green-100 text-green-800 rounded-lg shadow-md mb-2">
+                    <Link href="/tvet-colleges">TVET Colleges</Link>
+                  </div>
+                </div>
+                
+                <div className="flex flex-col items-center">
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="p-3 bg-blue-100 text-blue-800 rounded-lg shadow-md mb-2">
                     <Link href="/assessment">Assessment</Link>
                   </div>
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="flex">
-                    <div className="w-24 h-0.5 bg-gray-300"></div>
+                    <div className="w-24 h-0.5 bg-border"></div>
                   </div>
                   <div className="flex justify-center">
                     <div className="flex flex-col items-center mx-4">
-                      <div className="w-0.5 h-4 bg-gray-300"></div>
+                      <div className="w-0.5 h-4 bg-border"></div>
                       <div className="p-2 bg-indigo-50 text-indigo-800 rounded-lg shadow-sm">
                         <Link href="/results">Results</Link>
                       </div>
@@ -68,21 +75,21 @@ const WebsiteMap: React.FC = () => {
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="p-3 bg-blue-100 text-blue-800 rounded-lg shadow-md mb-2">
                     <Link href="/careers">Careers</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="p-3 bg-blue-100 text-blue-800 rounded-lg shadow-md mb-2">
                     <Link href="/profile">Profile</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
+                  <div className="w-0.5 h-4 bg-border"></div>
                   <div className="p-3 bg-blue-100 text-blue-800 rounded-lg shadow-md mb-2">
                     <Link href="/login">Login</Link>
                   </div>
@@ -92,35 +99,35 @@ const WebsiteMap: React.FC = () => {
               {/* Secondary navigation level */}
               <div className="flex justify-between w-full mb-8">
                 <div className="flex flex-col items-center">
-                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
+                  <div className="p-2 bg-muted text-foreground rounded-lg shadow-sm">
                     <Link href="/contact">Contact</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-foreground rounded-lg shadow-sm">
                     <Link href="/scholarships">Scholarships</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-foreground rounded-lg shadow-sm">
                     <Link href="/nsfas">NSFAS</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-foreground rounded-lg shadow-sm">
                     <Link href="/deadlines">Deadlines</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-foreground rounded-lg shadow-sm">
                     <Link href="/blog">Blog</Link>
                   </div>
                 </div>
@@ -128,36 +135,36 @@ const WebsiteMap: React.FC = () => {
               
               {/* Footer links */}
               <div className="flex justify-center mb-2">
-                <div className="w-[500px] h-0.5 bg-gray-300"></div>
+                <div className="w-[500px] h-0.5 bg-border"></div>
               </div>
               
-              <div className="w-0.5 h-4 bg-gray-300"></div>
-              <div className="p-3 bg-gray-200 text-foreground rounded-lg shadow-md mb-4 text-center">
+              <div className="w-0.5 h-4 bg-border"></div>
+              <div className="p-3 bg-muted text-foreground rounded-lg shadow-md mb-4 text-center">
                 Footer Links
               </div>
               
               <div className="flex justify-center mb-4">
-                <div className="w-[700px] h-0.5 bg-gray-300"></div>
+                <div className="w-[700px] h-0.5 bg-border"></div>
               </div>
               
               <div className="flex justify-between w-[700px]">
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg shadow-sm text-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-muted-foreground rounded-lg shadow-sm text-sm">
                     <Link href="/privacy">Privacy Policy</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg shadow-sm text-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-muted-foreground rounded-lg shadow-sm text-sm">
                     <Link href="/terms">Terms of Service</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
-                  <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg shadow-sm text-sm">
+                  <div className="w-0.5 h-4 bg-border"></div>
+                  <div className="p-2 bg-muted text-muted-foreground rounded-lg shadow-sm text-sm">
                     <Link href="/cookies">Cookie Policy</Link>
                   </div>
                 </div>
@@ -178,6 +185,7 @@ const WebsiteMap: React.FC = () => {
                 <li><strong>Home</strong> - Platform introduction, key features, testimonials</li>
                 <li><strong>About</strong> - Mission, team, values, story</li>
                 <li><strong>Universities</strong> - Searchable/filterable university listings</li>
+                <li><strong>TVET Colleges</strong> - Technical and vocational education institutions with map view</li>
                 <li><strong>Assessment</strong> - Personality and aptitude tests</li>
                 <li><strong>Results</strong> - University and career recommendations</li>
                 <li><strong>Careers</strong> - Career field information and guidance</li>
@@ -220,13 +228,13 @@ const WebsiteMap: React.FC = () => {
             <CardContent className="pt-6">
               <div className="flex flex-col items-center">
                 <div className="p-2 bg-blue-100 rounded-lg mb-2 w-40 text-center">Profile Creation</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-blue-100 rounded-lg mb-2 w-40 text-center">Select Assessment</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-blue-100 rounded-lg mb-2 w-40 text-center">Complete Questions</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-blue-100 rounded-lg mb-2 w-40 text-center">View Results</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-blue-100 rounded-lg w-40 text-center">University Matches</div>
               </div>
             </CardContent>
@@ -239,13 +247,13 @@ const WebsiteMap: React.FC = () => {
             <CardContent className="pt-6">
               <div className="flex flex-col items-center">
                 <div className="p-2 bg-indigo-100 rounded-lg mb-2 w-40 text-center">Universities Page</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-indigo-100 rounded-lg mb-2 w-40 text-center">Filter/Search</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-indigo-100 rounded-lg mb-2 w-40 text-center">View University Card</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-indigo-100 rounded-lg mb-2 w-40 text-center">Modal Details</div>
-                <div className="w-0.5 h-6 bg-gray-300"></div>
+                <div className="w-0.5 h-6 bg-border"></div>
                 <div className="p-2 bg-indigo-100 rounded-lg w-40 text-center">Official Website</div>
               </div>
             </CardContent>

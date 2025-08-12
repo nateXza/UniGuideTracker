@@ -10,6 +10,7 @@ import { Search, Filter, Map } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import TVETCollegeCard from '@/components/TVETCollegeCard';
+import TVETCollegeModal from '@/components/TVETCollegeModal';
 import { useTranslation } from '@/hooks/useTranslation';
 import { TvetCollege } from '@shared/schema';
 import { tvetColleges } from '@/data/tvetColleges';
@@ -31,6 +32,8 @@ const TVETColleges: React.FC = () => {
     accommodation: false,
   });
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
+  const [selectedCollege, setSelectedCollege] = useState<TvetCollege | null>(null);
+  const [showModal, setShowModal] = useState(false);
 
   const handleFilterChange = (key: keyof typeof filters) => {
     setFilters((prev) => ({
@@ -277,10 +280,98 @@ const TVETColleges: React.FC = () => {
                   ))}
                 </div>
               ) : (
-                <div className="h-[600px] bg-gray-100 rounded-lg flex items-center justify-center">
-                  <div className="text-center">
-                    <Map className="h-12 w-12 mx-auto text-gray-400" />
-                    <p className="mt-2 text-muted-foreground">{t('tvetColleges.mapViewComingSoon')}</p>
+                <div className="h-[600px] bg-muted rounded-lg p-4">
+                  <div className="relative w-full h-full">
+                    {/* Interactive Map Container */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg overflow-hidden">
+                      {/* Map Background Grid */}
+                      <div className="absolute inset-0 opacity-10">
+                        <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
+                          <defs>
+                            <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                              <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" strokeWidth="0.5"/>
+                            </pattern>
+                          </defs>
+                          <rect width="100%" height="100%" fill="url(#grid)" />
+                        </svg>
+                      </div>
+                      
+                      {/* South Africa Map Outline */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <svg className="w-80 h-80 text-blue-300 opacity-30" viewBox="0 0 400 300" fill="currentColor">
+                          <path d="M50,150 Q60,120 100,120 Q140,110 180,115 Q220,120 260,130 Q300,140 330,160 Q340,180 330,200 Q300,220 260,210 Q220,200 180,195 Q140,190 100,185 Q60,180 50,150 Z" />
+                          <path d="M180,195 Q200,210 240,215 Q270,220 290,200 Q280,240 250,250 Q220,255 190,245 Q170,235 165,215 Q170,205 180,195 Z" />
+                        </svg>
+                      </div>
+                      
+                      {/* College Location Markers */}
+                      {filteredColleges.map((college, index) => {
+                        const positions = [
+                          { x: 25, y: 30 }, // Western Cape
+                          { x: 35, y: 45 }, // Northern Cape  
+                          { x: 45, y: 25 }, // Eastern Cape
+                          { x: 55, y: 20 }, // KZN
+                          { x: 65, y: 35 }, // Free State
+                          { x: 70, y: 15 }, // Gauteng
+                          { x: 80, y: 10 }, // Mpumalanga
+                          { x: 75, y: 5 },  // Limpopo
+                          { x: 60, y: 30 }, // North West
+                          { x: 50, y: 40 }  // Additional position
+                        ];
+                        const pos = positions[index % positions.length];
+                        
+                        return (
+                          <div
+                            key={college.id}
+                            className="absolute transform -translate-x-1/2 -translate-y-1/2 cursor-pointer group"
+                            style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
+                            onClick={() => {
+                              setSelectedCollege(college);
+                              setShowModal(true);
+                            }}
+                          >
+                            {/* Marker */}
+                            <div className="relative">
+                              <div className="w-6 h-6 bg-red-500 rounded-full border-2 border-white shadow-lg group-hover:bg-red-600 transition-colors">
+                                <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-30 group-hover:opacity-50"></div>
+                              </div>
+                              
+                              {/* College Info Popup */}
+                              <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                                <div className="bg-card border border-border rounded-lg shadow-lg p-3 min-w-[200px]">
+                                  <h4 className="font-semibold text-foreground text-sm">{college.name}</h4>
+                                  <p className="text-muted-foreground text-xs mt-1">{college.location}</p>
+                                  <p className="text-muted-foreground text-xs">{college.programs?.length || 0} programs</p>
+                                  <div className="absolute top-full left-1/2 transform -translate-x-1/2">
+                                    <div className="w-2 h-2 bg-card border-r border-b border-border rotate-45"></div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
+                      
+                      {/* Map Legend */}
+                      <div className="absolute bottom-4 left-4 bg-card border border-border rounded-lg p-3 shadow-lg">
+                        <h4 className="font-semibold text-foreground text-sm mb-2">Legend</h4>
+                        <div className="flex items-center space-x-2">
+                          <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                          <span className="text-muted-foreground text-xs">TVET College</span>
+                        </div>
+                        <p className="text-muted-foreground text-xs mt-2">Click markers for details</p>
+                      </div>
+                      
+                      {/* Map Controls */}
+                      <div className="absolute top-4 right-4 bg-card border border-border rounded-lg p-2 shadow-lg">
+                        <div className="text-muted-foreground text-xs text-center">
+                          South Africa
+                        </div>
+                        <div className="text-muted-foreground text-xs text-center mt-1">
+                          {filteredColleges.length} Colleges
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}
@@ -345,6 +436,18 @@ const TVETColleges: React.FC = () => {
         </Container>
       </main>
       <Footer />
+      
+      {/* TVET College Modal */}
+      {selectedCollege && (
+        <TVETCollegeModal
+          college={selectedCollege}
+          isOpen={showModal}
+          onClose={() => {
+            setShowModal(false);
+            setSelectedCollege(null);
+          }}
+        />
+      )}
     </div>
   );
 };
