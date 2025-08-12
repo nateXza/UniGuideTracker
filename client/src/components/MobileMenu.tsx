@@ -23,7 +23,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${
             isActive("/") 
               ? "text-primary-600 bg-primary-50" 
-              : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              : "text-foreground hover:text-foreground hover:bg-background"
           }`}
           onClick={onClose}
         >
@@ -34,7 +34,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${
             isActive("/universities") 
               ? "text-primary-600 bg-primary-50" 
-              : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              : "text-foreground hover:text-foreground hover:bg-background"
           }`}
           onClick={onClose}
         >
@@ -45,7 +45,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${
             isActive("/tvet-colleges") 
               ? "text-primary-600 bg-primary-50" 
-              : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              : "text-foreground hover:text-foreground hover:bg-background"
           }`}
           onClick={onClose}
         >
@@ -56,7 +56,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${
             isActive("/assessment") 
               ? "text-primary-600 bg-primary-50" 
-              : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              : "text-foreground hover:text-foreground hover:bg-background"
           }`}
           onClick={onClose}
         >
@@ -67,14 +67,14 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
           className={`block px-3 py-2 rounded-md text-base font-medium ${
             isActive("/about") 
               ? "text-primary-600 bg-primary-50" 
-              : "text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+              : "text-foreground hover:text-foreground hover:bg-background"
           }`}
           onClick={onClose}
         >
           {t('nav.about')}
         </Link>
         <div className="px-3 py-2">
-          <div className="text-sm font-medium text-gray-500 mb-2">{t('nav.language')}</div>
+          <div className="text-sm font-medium text-muted-foreground mb-2">{t('nav.language')}</div>
           <LanguageSelector />
         </div>
       </div>
@@ -82,7 +82,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ onClose }) => {
         <div className="flex items-center px-5 space-x-3">
           <Link 
             href="/login"
-            className="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+            className="block px-3 py-2 rounded-md text-base font-medium text-foreground hover:text-foreground hover:bg-background"
             onClick={onClose}
           >
             {t('nav.signIn')}

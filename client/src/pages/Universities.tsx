@@ -41,13 +41,13 @@ const Universities: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section className="py-12 bg-card">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
             {t('universities.title')}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
             {t('universities.subtitle')}
           </p>
         </div>
@@ -96,7 +96,7 @@ const Universities: React.FC = () => {
           </div>
         ) : (
           <div className="text-center py-8">
-            <p className="text-gray-500">{t('universities.noResults')}</p>
+            <p className="text-muted-foreground">{t('universities.noResults')}</p>
           </div>
         )}
         

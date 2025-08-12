@@ -185,7 +185,7 @@ const Deadlines: React.FC = () => {
         {t('deadlines.title', 'University Application Deadlines')}
       </h1>
       
-      <p className="text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+      <p className="text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
         {t('deadlines.subtitle', 'Track important application deadlines for South African universities to ensure you never miss an opportunity')}
       </p>
       
@@ -258,7 +258,7 @@ const Deadlines: React.FC = () => {
                       <TableCell className="font-medium">
                         {deadline.university}
                         {deadline.notes && (
-                          <p className="text-xs text-gray-500 mt-1">{deadline.notes}</p>
+                          <p className="text-xs text-muted-foreground mt-1">{deadline.notes}</p>
                         )}
                       </TableCell>
                       <TableCell>{deadline.province}</TableCell>
@@ -302,7 +302,7 @@ const Deadlines: React.FC = () => {
       </div>
       
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           {t('deadlines.keyDates.title', 'Key Dates for 2025 Academic Year')}
         </h2>
         
@@ -350,7 +350,7 @@ const Deadlines: React.FC = () => {
           </Card>
         </div>
         
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           {t('deadlines.tips.title', 'Application Tips')}
         </h2>
         
@@ -359,36 +359,36 @@ const Deadlines: React.FC = () => {
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">1</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('deadlines.tips.early.title', 'Apply Early')}</h3>
-                <p className="text-gray-700">{t('deadlines.tips.early.desc', 'Don\'t wait until the last minute. Early applications often receive priority consideration for both admissions and accommodation.')}</p>
+                <h3 className="font-semibold text-foreground">{t('deadlines.tips.early.title', 'Apply Early')}</h3>
+                <p className="text-foreground">{t('deadlines.tips.early.desc', 'Don\'t wait until the last minute. Early applications often receive priority consideration for both admissions and accommodation.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">2</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('deadlines.tips.multiple.title', 'Apply to Multiple Universities')}</h3>
-                <p className="text-gray-700">{t('deadlines.tips.multiple.desc', 'Increase your chances by applying to at least 3-5 universities, including a "reach" university, "target" universities, and "safe" options.')}</p>
+                <h3 className="font-semibold text-foreground">{t('deadlines.tips.multiple.title', 'Apply to Multiple Universities')}</h3>
+                <p className="text-foreground">{t('deadlines.tips.multiple.desc', 'Increase your chances by applying to at least 3-5 universities, including a "reach" university, "target" universities, and "safe" options.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">3</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('deadlines.tips.documents.title', 'Prepare Documents Early')}</h3>
-                <p className="text-gray-700">{t('deadlines.tips.documents.desc', 'Gather all required documents (ID, academic records, proof of residence, etc.) well before the application deadline.')}</p>
+                <h3 className="font-semibold text-foreground">{t('deadlines.tips.documents.title', 'Prepare Documents Early')}</h3>
+                <p className="text-foreground">{t('deadlines.tips.documents.desc', 'Gather all required documents (ID, academic records, proof of residence, etc.) well before the application deadline.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">4</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('deadlines.tips.follow.title', 'Follow Up')}</h3>
-                <p className="text-gray-700">{t('deadlines.tips.follow.desc', 'After submitting your application, regularly check your application status on the university\'s online portal or contact the admissions office if necessary.')}</p>
+                <h3 className="font-semibold text-foreground">{t('deadlines.tips.follow.title', 'Follow Up')}</h3>
+                <p className="text-foreground">{t('deadlines.tips.follow.desc', 'After submitting your application, regularly check your application status on the university\'s online portal or contact the admissions office if necessary.')}</p>
               </div>
             </li>
           </ul>
         </div>
         
         <div className="text-center">
-          <p className="text-gray-600 mb-4">
+          <p className="text-muted-foreground mb-4">
             {t('deadlines.needHelp', 'Need more information about a specific university\'s application process?')}
           </p>
           <Link href="/universities">

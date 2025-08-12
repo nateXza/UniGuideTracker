@@ -43,13 +43,13 @@ const Results: React.FC = () => {
   const hasCompleteData = hasProfile && hasResults;
 
   return (
-    <section className="bg-gray-50 py-12 sm:py-16 lg:py-20">
+    <section className="bg-background py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
             {t('results.title')}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
             {t('results.subtitle')}
           </p>
         </div>
@@ -57,15 +57,15 @@ const Results: React.FC = () => {
         {/* Progress Steps */}
         <ProgressSteps currentStep={3} />
 
-        <div className="mt-12 bg-white shadow-xl rounded-lg overflow-hidden">
+        <div className="mt-12 bg-card shadow-xl rounded-lg overflow-hidden">
           {hasCompleteData ? (
             <div className="px-4 py-5 sm:p-6">
               <div className="sm:flex sm:items-start sm:justify-between">
                 <div>
-                  <h3 className="text-lg leading-6 font-medium text-gray-900">
+                  <h3 className="text-lg leading-6 font-medium text-foreground">
                     {profile.firstName ? `${profile.firstName}'s University Matches` : t('results.universityMatches')}
                   </h3>
-                  <p className="mt-2 max-w-2xl text-sm text-gray-500">
+                  <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
                     {t('results.matchDescription')}
                   </p>
                 </div>
@@ -83,22 +83,22 @@ const Results: React.FC = () => {
                 <div className="border-t border-gray-200 pt-6">
                   <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
                     <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">{t('results.matchDate')}</dt>
-                      <dd className="mt-1 text-sm text-gray-900">
+                      <dt className="text-sm font-medium text-muted-foreground">{t('results.matchDate')}</dt>
+                      <dd className="mt-1 text-sm text-foreground">
                         {results.matchDate ? new Date(results.matchDate).toLocaleDateString() : new Date().toLocaleDateString()}
                       </dd>
                     </div>
                     <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">{t('results.preferredField')}</dt>
-                      <dd className="mt-1 text-sm text-gray-900">{profile.fieldOfStudy || t('results.notSpecified')}</dd>
+                      <dt className="text-sm font-medium text-muted-foreground">{t('results.preferredField')}</dt>
+                      <dd className="mt-1 text-sm text-foreground">{profile.fieldOfStudy || t('results.notSpecified')}</dd>
                     </div>
                     <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">{t('results.averageMark')}</dt>
-                      <dd className="mt-1 text-sm text-gray-900">{profile.averageMark ? `${profile.averageMark}%` : t('results.notSpecified')}</dd>
+                      <dt className="text-sm font-medium text-muted-foreground">{t('results.averageMark')}</dt>
+                      <dd className="mt-1 text-sm text-foreground">{profile.averageMark ? `${profile.averageMark}%` : t('results.notSpecified')}</dd>
                     </div>
                     <div className="sm:col-span-1">
-                      <dt className="text-sm font-medium text-gray-500">{t('results.careerDirection')}</dt>
-                      <dd className="mt-1 text-sm text-gray-900">
+                      <dt className="text-sm font-medium text-muted-foreground">{t('results.careerDirection')}</dt>
+                      <dd className="mt-1 text-sm text-foreground">
                         {results.careerMatches?.primaryCareer || recommendedCareers[0] || t('results.notSpecified')}
                       </dd>
                     </div>
@@ -107,7 +107,7 @@ const Results: React.FC = () => {
               </div>
 
               <div className="mt-8">
-                <h4 className="text-base font-medium text-gray-900">{t('results.topUniversityMatches')}</h4>
+                <h4 className="text-base font-medium text-foreground">{t('results.topUniversityMatches')}</h4>
                 <ul className="mt-4 divide-y divide-gray-200">
                   {topUniversities.length > 0 ? (
                     topUniversities.map((match, index) => (
@@ -119,8 +119,8 @@ const Results: React.FC = () => {
                             </span>
                           </div>
                           <div className="flex-1 min-w-0">
-                            <p className="text-sm font-medium text-gray-900 truncate">{match.university.name}</p>
-                            <p className="text-sm text-gray-500 truncate">{match.program}</p>
+                            <p className="text-sm font-medium text-foreground truncate">{match.university.name}</p>
+                            <p className="text-sm text-muted-foreground truncate">{match.program}</p>
                           </div>
                           <div>
                             <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800">
@@ -131,22 +131,22 @@ const Results: React.FC = () => {
                       </li>
                     ))
                   ) : (
-                    <p className="py-4 text-gray-500">{t('results.noMatchesFound')}</p>
+                    <p className="py-4 text-muted-foreground">{t('results.noMatchesFound')}</p>
                   )}
                 </ul>
               </div>
 
               <div className="mt-8">
-                <h4 className="text-base font-medium text-gray-900">{t('results.careerInsights')}</h4>
-                <div className="mt-4 bg-gray-50 p-4 rounded-lg">
+                <h4 className="text-base font-medium text-foreground">{t('results.careerInsights')}</h4>
+                <div className="mt-4 bg-muted p-4 rounded-lg">
                   <div className="flex flex-col sm:flex-row">
                     <div className="sm:w-1/2">
-                      <h5 className="text-sm font-medium text-gray-900 mb-2">{t('results.careerPersonalityProfile')}</h5>
+                      <h5 className="text-sm font-medium text-foreground mb-2">{t('results.careerPersonalityProfile')}</h5>
                       <div className="space-y-2">
                         {personalityTraits.map((trait) => (
                           <div key={trait.trait}>
                             <div className="flex justify-between text-xs">
-                              <span className="text-gray-500">{trait.trait}</span>
+                              <span className="text-muted-foreground">{trait.trait}</span>
                               <span>{trait.score}%</span>
                             </div>
                             <Progress value={trait.score} className="h-2 mt-1" />
@@ -155,8 +155,8 @@ const Results: React.FC = () => {
                       </div>
                     </div>
                     <div className="mt-6 sm:mt-0 sm:w-1/2 sm:pl-6">
-                      <h5 className="text-sm font-medium text-gray-900 mb-2">{t('results.recommendedCareerPaths')}</h5>
-                      <ul className="space-y-2 text-sm text-gray-600">
+                      <h5 className="text-sm font-medium text-foreground mb-2">{t('results.recommendedCareerPaths')}</h5>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
                         {recommendedCareers.length > 0 ? (
                           recommendedCareers.map((career, index) => (
                             <li key={index} className="flex items-center">
@@ -165,7 +165,7 @@ const Results: React.FC = () => {
                             </li>
                           ))
                         ) : (
-                          <li className="text-gray-500">{t('results.noRecommendationsYet')}</li>
+                          <li className="text-muted-foreground">{t('results.noRecommendationsYet')}</li>
                         )}
                       </ul>
                     </div>
@@ -183,8 +183,8 @@ const Results: React.FC = () => {
             </div>
           ) : (
             <div className="px-4 py-5 sm:p-6 text-center">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">{t('results.incomplete')}</h3>
-              <p className="text-gray-500 mb-6">{t('results.incompleteDescription')}</p>
+              <h3 className="text-lg font-medium text-foreground mb-4">{t('results.incomplete')}</h3>
+              <p className="text-muted-foreground mb-6">{t('results.incompleteDescription')}</p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 {!hasProfile && (
                   <Button asChild>

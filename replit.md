@@ -56,6 +56,8 @@ The application follows a full-stack JavaScript architecture:
   - Created custom SVG logos for all new TVET colleges
   - Fixed broken Unsplash image URLs in university and blog data
   - Enhanced database from 6 to 10 TVET colleges with comprehensive program information
+  - **FIXED DARK MODE**: Systematically replaced all hardcoded colors (text-gray-900, bg-white, bg-gray-50, etc.) with theme-aware CSS classes (text-foreground, bg-card, bg-background, text-muted-foreground) across all pages and components
+  - Dark mode now applies consistently across the entire website
   - Application running successfully on port 5000 with all features functional
 
 ## User Preferences

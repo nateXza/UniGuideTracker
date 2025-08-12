@@ -101,10 +101,10 @@ const ProfilePage: React.FC = () => {
     <section className="bg-primary-50 py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
             {t('profile.title')}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
             {t('profile.subtitle')}
           </p>
         </div>
@@ -113,10 +113,10 @@ const ProfilePage: React.FC = () => {
         <ProgressSteps currentStep={1} />
 
         {/* Profile Form */}
-        <div className="bg-white shadow rounded-lg max-w-3xl mx-auto p-6 sm:p-8">
+        <div className="bg-card shadow rounded-lg max-w-3xl mx-auto p-6 sm:p-8">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">{t('profile.personalInfo')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">{t('profile.personalInfo')}</h3>
               
               <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                 {/* First Name */}
@@ -213,7 +213,7 @@ const ProfilePage: React.FC = () => {
                 />
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">{t('profile.academicInfo')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">{t('profile.academicInfo')}</h3>
               
               <div className="grid grid-cols-1 gap-y-6 gap-x-4 sm:grid-cols-6">
                 {/* Average Mark */}
@@ -309,7 +309,7 @@ const ProfilePage: React.FC = () => {
                 />
               </div>
 
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">{t('profile.studyPreferences')}</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-6">{t('profile.studyPreferences')}</h3>
               
               <div className="space-y-6">
                 {/* Field of Study */}
@@ -340,7 +340,7 @@ const ProfilePage: React.FC = () => {
 
                 {/* Financial Considerations */}
                 <div>
-                  <Label className="block text-sm font-medium text-gray-700 mb-2">
+                  <Label className="block text-sm font-medium text-foreground mb-2">
                     {t('profile.form.financialConsiderations')}
                   </Label>
                   <div className="mt-2 space-y-2">

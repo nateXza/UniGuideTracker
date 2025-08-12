@@ -43,7 +43,7 @@ const UniversityModal: React.FC<UniversityModalProps> = ({
             <div>
               <DialogTitle className="text-2xl font-bold">{university.name}</DialogTitle>
               <DialogDescription className="flex items-center mt-1">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1 text-muted-foreground" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
@@ -63,7 +63,7 @@ const UniversityModal: React.FC<UniversityModalProps> = ({
             
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-2">{t('universities.about', 'About')}</h3>
-              <p className="text-gray-700">{university.description}</p>
+              <p className="text-foreground">{university.description}</p>
             </div>
             
             <div className="mb-6">
@@ -71,7 +71,7 @@ const UniversityModal: React.FC<UniversityModalProps> = ({
               <div className="space-y-3">
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-500">{t('universities.studentSatisfaction', 'Student Satisfaction')}</span>
+                    <span className="text-muted-foreground">{t('universities.studentSatisfaction', 'Student Satisfaction')}</span>
                     <span className="font-medium">{university.ratings.studentSatisfaction}/5</span>
                   </div>
                   <Progress 
@@ -81,7 +81,7 @@ const UniversityModal: React.FC<UniversityModalProps> = ({
                 </div>
                 <div>
                   <div className="flex justify-between text-sm mb-1">
-                    <span className="text-gray-500">{t('universities.academicExcellence', 'Academic Excellence')}</span>
+                    <span className="text-muted-foreground">{t('universities.academicExcellence', 'Academic Excellence')}</span>
                     <span className="font-medium">{university.ratings.academicExcellence}/5</span>
                   </div>
                   <Progress 
@@ -107,12 +107,12 @@ const UniversityModal: React.FC<UniversityModalProps> = ({
           <div>
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-2">{t('universities.admissionRequirements', 'Admission Requirements')}</h3>
-              <p className="text-gray-700">{university.admissionRequirements}</p>
+              <p className="text-foreground">{university.admissionRequirements}</p>
             </div>
             
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-2">{t('universities.programs', 'Programs Offered')}</h3>
-              <ul className="list-disc list-inside space-y-1 text-gray-700">
+              <ul className="list-disc list-inside space-y-1 text-foreground">
                 {university.programsOffered.map((program, index) => (
                   <li key={index}>{program}</li>
                 ))}
@@ -121,7 +121,7 @@ const UniversityModal: React.FC<UniversityModalProps> = ({
             
             <div className="mb-6">
               <h3 className="text-lg font-semibold mb-2">{t('universities.importantInfo', 'Important Information')}</h3>
-              <div className="space-y-3 text-gray-700">
+              <div className="space-y-3 text-foreground">
                 <div className="flex">
                   <span className="font-medium w-1/3">{t('universities.tuition', 'Tuition Fees')}:</span>
                   <span>{university.tuitionRangeFees}</span>

@@ -95,7 +95,7 @@ const TVETColleges: React.FC = () => {
               <h1 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
                 {t('tvetColleges.pageTitle')}
               </h1>
-              <p className="text-gray-600 mb-8 text-lg">
+              <p className="text-muted-foreground mb-8 text-lg">
                 {t('tvetColleges.pageDescription')}
               </p>
               <div className="relative">
@@ -114,9 +114,9 @@ const TVETColleges: React.FC = () => {
         <Container className="py-12">
           <div className="flex flex-col md:flex-row gap-8">
             {/* Filters Sidebar */}
-            <div className="w-full md:w-64 bg-white p-4 rounded-lg border">
+            <div className="w-full md:w-64 bg-card p-4 rounded-lg border">
               <div className="flex items-center justify-between mb-4">
-                <h3 className="font-semibold text-gray-800 flex items-center">
+                <h3 className="font-semibold text-foreground flex items-center">
                   <Filter className="mr-2 h-4 w-4" />
                   {t('tvetColleges.filters')}
                 </h3>
@@ -259,7 +259,7 @@ const TVETColleges: React.FC = () => {
             {/* Content Area */}
             <div className="flex-1">
               <div className="flex justify-between items-center mb-6">
-                <h2 className="text-xl font-semibold text-gray-800">
+                <h2 className="text-xl font-semibold text-foreground">
                   {filteredColleges.length} {t('tvetColleges.resultsFound')}
                 </h2>
                 <Tabs defaultValue="grid" onValueChange={(value) => setViewMode(value as 'grid' | 'map')}>
@@ -280,14 +280,14 @@ const TVETColleges: React.FC = () => {
                 <div className="h-[600px] bg-gray-100 rounded-lg flex items-center justify-center">
                   <div className="text-center">
                     <Map className="h-12 w-12 mx-auto text-gray-400" />
-                    <p className="mt-2 text-gray-600">{t('tvetColleges.mapViewComingSoon')}</p>
+                    <p className="mt-2 text-muted-foreground">{t('tvetColleges.mapViewComingSoon')}</p>
                   </div>
                 </div>
               )}
 
               {filteredColleges.length === 0 && (
                 <div className="py-16 text-center">
-                  <p className="text-gray-500 mb-4">{t('tvetColleges.noResults')}</p>
+                  <p className="text-muted-foreground mb-4">{t('tvetColleges.noResults')}</p>
                   <Button
                     variant="outline"
                     onClick={() => {
@@ -315,28 +315,28 @@ const TVETColleges: React.FC = () => {
           </div>
         </Container>
 
-        <Container className="py-12 bg-gray-50">
+        <Container className="py-12 bg-background">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-2xl font-bold mb-4">{t('tvetColleges.whyTVET')}</h2>
-            <p className="text-gray-600 mb-8">
+            <p className="text-muted-foreground mb-8">
               {t('tvetColleges.whyTVETDescription')}
             </p>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-card p-6 rounded-lg shadow-sm">
                 <h3 className="font-semibold mb-2">{t('tvetColleges.practical')}</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   {t('tvetColleges.practicalDescription')}
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-card p-6 rounded-lg shadow-sm">
                 <h3 className="font-semibold mb-2">{t('tvetColleges.affordable')}</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   {t('tvetColleges.affordableDescription')}
                 </p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-card p-6 rounded-lg shadow-sm">
                 <h3 className="font-semibold mb-2">{t('tvetColleges.inDemand')}</h3>
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-muted-foreground">
                   {t('tvetColleges.inDemandDescription')}
                 </p>
               </div>

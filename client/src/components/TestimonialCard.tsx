@@ -33,18 +33,18 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
   };
   
   return (
-    <Card className="bg-gray-50 rounded-lg shadow-sm p-6">
+    <Card className="bg-background rounded-lg shadow-sm p-6">
       <CardContent className="p-0">
         <div className="flex items-center mb-4">
           <div className="h-12 w-12 rounded-full bg-primary-100 flex items-center justify-center text-primary-700 font-bold">
             {testimonial.initials}
           </div>
           <div className="ml-4">
-            <h3 className="text-lg font-medium text-gray-900">{testimonial.name}</h3>
-            <p className="text-sm text-gray-500">{testimonial.role}</p>
+            <h3 className="text-lg font-medium text-foreground">{testimonial.name}</h3>
+            <p className="text-sm text-muted-foreground">{testimonial.role}</p>
           </div>
         </div>
-        <div className="text-gray-600">
+        <div className="text-muted-foreground">
           <p>"{testimonial.text}"</p>
         </div>
         <div className="mt-4 flex">

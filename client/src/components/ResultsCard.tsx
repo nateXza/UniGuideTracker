@@ -29,14 +29,14 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
   const { t } = useTranslation();
   
   return (
-    <Card className="bg-white shadow-xl rounded-lg overflow-hidden">
+    <Card className="bg-card shadow-xl rounded-lg overflow-hidden">
       <CardContent className="px-4 py-5 sm:p-6">
         <div className="sm:flex sm:items-start sm:justify-between">
           <div>
-            <h3 className="text-lg leading-6 font-medium text-gray-900">
+            <h3 className="text-lg leading-6 font-medium text-foreground">
               {studentName ? `${studentName}'s ${t('results.universityMatches')}` : t('results.universityMatches')}
             </h3>
-            <p className="mt-2 max-w-2xl text-sm text-gray-500">
+            <p className="mt-2 max-w-2xl text-sm text-muted-foreground">
               {t('results.matchDescription')}
             </p>
           </div>
@@ -54,22 +54,22 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
           <div className="border-t border-gray-200 pt-6">
             <dl className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2">
               <div className="sm:col-span-1">
-                <dt className="text-sm font-medium text-gray-500">{t('results.matchDate')}</dt>
-                <dd className="mt-1 text-sm text-gray-900">
+                <dt className="text-sm font-medium text-muted-foreground">{t('results.matchDate')}</dt>
+                <dd className="mt-1 text-sm text-foreground">
                   {new Date(matchDate).toLocaleDateString()}
                 </dd>
               </div>
               <div className="sm:col-span-1">
-                <dt className="text-sm font-medium text-gray-500">{t('results.preferredField')}</dt>
-                <dd className="mt-1 text-sm text-gray-900">{fieldOfStudy || t('results.notSpecified')}</dd>
+                <dt className="text-sm font-medium text-muted-foreground">{t('results.preferredField')}</dt>
+                <dd className="mt-1 text-sm text-foreground">{fieldOfStudy || t('results.notSpecified')}</dd>
               </div>
               <div className="sm:col-span-1">
-                <dt className="text-sm font-medium text-gray-500">{t('results.averageMark')}</dt>
-                <dd className="mt-1 text-sm text-gray-900">{averageMark ? `${averageMark}%` : t('results.notSpecified')}</dd>
+                <dt className="text-sm font-medium text-muted-foreground">{t('results.averageMark')}</dt>
+                <dd className="mt-1 text-sm text-foreground">{averageMark ? `${averageMark}%` : t('results.notSpecified')}</dd>
               </div>
               <div className="sm:col-span-1">
-                <dt className="text-sm font-medium text-gray-500">{t('results.careerDirection')}</dt>
-                <dd className="mt-1 text-sm text-gray-900">
+                <dt className="text-sm font-medium text-muted-foreground">{t('results.careerDirection')}</dt>
+                <dd className="mt-1 text-sm text-foreground">
                   {primaryCareer || t('results.notSpecified')}
                 </dd>
               </div>
@@ -78,7 +78,7 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
         </div>
 
         <div className="mt-8">
-          <h4 className="text-base font-medium text-gray-900">{t('results.topUniversityMatches')}</h4>
+          <h4 className="text-base font-medium text-foreground">{t('results.topUniversityMatches')}</h4>
           <ul className="mt-4 divide-y divide-gray-200">
             {universityMatches.length > 0 ? (
               universityMatches.map((match, index) => (
@@ -90,8 +90,8 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
                       </span>
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-sm font-medium text-gray-900 truncate">{match.university.name}</p>
-                      <p className="text-sm text-gray-500 truncate">{match.program}</p>
+                      <p className="text-sm font-medium text-foreground truncate">{match.university.name}</p>
+                      <p className="text-sm text-muted-foreground truncate">{match.program}</p>
                     </div>
                     <div>
                       <Badge variant="outline" className="bg-green-100 text-green-800 border-green-100">
@@ -102,22 +102,22 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
                 </li>
               ))
             ) : (
-              <p className="py-4 text-gray-500">{t('results.noMatchesFound')}</p>
+              <p className="py-4 text-muted-foreground">{t('results.noMatchesFound')}</p>
             )}
           </ul>
         </div>
 
         <div className="mt-8">
-          <h4 className="text-base font-medium text-gray-900">{t('results.careerInsights')}</h4>
-          <div className="mt-4 bg-gray-50 p-4 rounded-lg">
+          <h4 className="text-base font-medium text-foreground">{t('results.careerInsights')}</h4>
+          <div className="mt-4 bg-background p-4 rounded-lg">
             <div className="flex flex-col sm:flex-row">
               <div className="sm:w-1/2">
-                <h5 className="text-sm font-medium text-gray-900 mb-2">{t('results.careerPersonalityProfile')}</h5>
+                <h5 className="text-sm font-medium text-foreground mb-2">{t('results.careerPersonalityProfile')}</h5>
                 <div className="space-y-2">
                   {personalityTraits.map((trait) => (
                     <div key={trait.trait}>
                       <div className="flex justify-between text-xs">
-                        <span className="text-gray-500">{trait.trait}</span>
+                        <span className="text-muted-foreground">{trait.trait}</span>
                         <span>{trait.score}%</span>
                       </div>
                       <Progress value={trait.score} className="h-2 mt-1" />
@@ -126,8 +126,8 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
                 </div>
               </div>
               <div className="mt-6 sm:mt-0 sm:w-1/2 sm:pl-6">
-                <h5 className="text-sm font-medium text-gray-900 mb-2">{t('results.recommendedCareerPaths')}</h5>
-                <ul className="space-y-2 text-sm text-gray-600">
+                <h5 className="text-sm font-medium text-foreground mb-2">{t('results.recommendedCareerPaths')}</h5>
+                <ul className="space-y-2 text-sm text-muted-foreground">
                   {recommendedCareers.length > 0 ? (
                     recommendedCareers.map((career, index) => (
                       <li key={index} className="flex items-center">
@@ -136,7 +136,7 @@ const ResultsCard: React.FC<ResultsCardProps> = ({
                       </li>
                     ))
                   ) : (
-                    <li className="text-gray-500">{t('results.noRecommendationsYet')}</li>
+                    <li className="text-muted-foreground">{t('results.noRecommendationsYet')}</li>
                   )}
                 </ul>
               </div>

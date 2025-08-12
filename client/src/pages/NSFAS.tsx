@@ -16,7 +16,7 @@ const NSFAS: React.FC = () => {
           {t('nsfas.title', 'NSFAS Funding Information')}
         </h1>
         
-        <p className="text-xl text-gray-600 text-center mb-10">
+        <p className="text-xl text-muted-foreground text-center mb-10">
           {t('nsfas.subtitle', 'Everything you need to know about National Student Financial Aid Scheme (NSFAS) funding for South African students')}
         </p>
         
@@ -57,7 +57,7 @@ const NSFAS: React.FC = () => {
         
         <Separator className="my-10" />
         
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           {t('nsfas.eligibility.title', 'Eligibility Criteria')}
         </h2>
         
@@ -91,7 +91,7 @@ const NSFAS: React.FC = () => {
           </CardContent>
         </Card>
         
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           {t('nsfas.application.title', 'Application Process')}
         </h2>
         
@@ -147,7 +147,7 @@ const NSFAS: React.FC = () => {
           </Button>
         </div>
         
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           {t('nsfas.faq.title', 'Frequently Asked Questions')}
         </h2>
         
@@ -220,10 +220,10 @@ const NSFAS: React.FC = () => {
         </Card>
         
         <div className="text-center">
-          <p className="italic text-gray-600 mb-4">
+          <p className="italic text-muted-foreground mb-4">
             {t('nsfas.disclaimer', 'Disclaimer: The information provided on this page is for guidance purposes only. For the most up-to-date and official information, please visit the official NSFAS website.')}
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-muted-foreground">
             {t('nsfas.lastUpdated', 'Last updated: April 2023')}
           </p>
         </div>

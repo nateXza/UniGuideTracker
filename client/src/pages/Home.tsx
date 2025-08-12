@@ -57,12 +57,12 @@ const Home: React.FC = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:items-center lg:justify-between">
             <div className="lg:w-1/2 lg:pr-10">
-              <h1 className="text-4xl font-bold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+              <h1 className="text-4xl font-bold text-foreground sm:text-5xl sm:tracking-tight lg:text-6xl">
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-700">
                   {t('home.hero.title')}
                 </span>
               </h1>
-              <p className="mt-5 text-xl text-gray-600">
+              <p className="mt-5 text-xl text-muted-foreground">
                 {t('home.hero.subtitle')}
               </p>
               <div className="mt-8 flex flex-col sm:flex-row sm:space-x-4">
@@ -86,8 +86,8 @@ const Home: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Your Educational Journey</h3>
-                  <p className="text-gray-600">Discover universities, TVET colleges, and career paths tailored for you</p>
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Your Educational Journey</h3>
+                  <p className="text-muted-foreground">Discover universities, TVET colleges, and career paths tailored for you</p>
                 </div>
               </div>
             </div>
@@ -99,12 +99,12 @@ const Home: React.FC = () => {
       <section className="py-12 bg-gradient-to-b from-white to-purple-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-600 to-pink-600">
                 {t('home.features.title')}
               </span>
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
               {t('home.features.subtitle')}
             </p>
           </div>
@@ -112,30 +112,30 @@ const Home: React.FC = () => {
           <div className="mt-12">
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               {/* Feature 1 */}
-              <div className="flex flex-col items-center text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-white border border-purple-100">
+              <div className="flex flex-col items-center text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-card border border-purple-100">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-white mb-4">
                   <i className="fas fa-user-graduate text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-medium text-gray-900">{t('home.features.feature1.title')}</h3>
-                <p className="mt-3 text-base text-gray-500">{t('home.features.feature1.description')}</p>
+                <h3 className="text-xl font-medium text-foreground">{t('home.features.feature1.title')}</h3>
+                <p className="mt-3 text-base text-muted-foreground">{t('home.features.feature1.description')}</p>
               </div>
 
               {/* Feature 2 */}
-              <div className="flex flex-col items-center text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-white border border-purple-100">
+              <div className="flex flex-col items-center text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-card border border-purple-100">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-white mb-4">
                   <i className="fas fa-brain text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-medium text-gray-900">{t('home.features.feature2.title')}</h3>
-                <p className="mt-3 text-base text-gray-500">{t('home.features.feature2.description')}</p>
+                <h3 className="text-xl font-medium text-foreground">{t('home.features.feature2.title')}</h3>
+                <p className="mt-3 text-base text-muted-foreground">{t('home.features.feature2.description')}</p>
               </div>
 
               {/* Feature 3 */}
-              <div className="flex flex-col items-center text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-white border border-purple-100">
+              <div className="flex flex-col items-center text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-300 bg-card border border-purple-100">
                 <div className="flex items-center justify-center h-16 w-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-white mb-4">
                   <i className="fas fa-university text-2xl"></i>
                 </div>
-                <h3 className="text-xl font-medium text-gray-900">{t('home.features.feature3.title')}</h3>
-                <p className="mt-3 text-base text-gray-500">{t('home.features.feature3.description')}</p>
+                <h3 className="text-xl font-medium text-foreground">{t('home.features.feature3.title')}</h3>
+                <p className="mt-3 text-base text-muted-foreground">{t('home.features.feature3.description')}</p>
               </div>
             </div>
           </div>
@@ -146,12 +146,12 @@ const Home: React.FC = () => {
       <section className="py-12 bg-gradient-to-b from-purple-50 to-teal-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-500 to-emerald-600">
                 {t('home.universities.title')}
               </span>
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
               {t('home.universities.subtitle')}
             </p>
           </div>
@@ -183,12 +183,12 @@ const Home: React.FC = () => {
       <section className="py-12 sm:py-16 bg-gradient-to-b from-teal-50 to-amber-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+            <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-amber-500 to-orange-600">
                 {t('home.testimonials.title')}
               </span>
             </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
               {t('home.testimonials.subtitle')}
             </p>
           </div>
@@ -212,7 +212,7 @@ const Home: React.FC = () => {
               {t('home.cta.subtitle')}
             </p>
             <div className="mt-8 flex justify-center">
-              <Button asChild variant="secondary" size="lg" className="bg-white text-indigo-600 hover:bg-indigo-50">
+              <Button asChild variant="secondary" size="lg" className="bg-card text-indigo-600 hover:bg-indigo-50">
                 <Link href="/profile">
                   {t('home.cta.button')}
                 </Link>

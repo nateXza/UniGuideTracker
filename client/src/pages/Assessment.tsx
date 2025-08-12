@@ -165,12 +165,12 @@ const Assessment: React.FC = () => {
 
   // Render functions for different phases
   const renderTestSelection = () => (
-    <div className="bg-white shadow rounded-lg max-w-4xl mx-auto p-6 sm:p-8">
+    <div className="bg-card shadow rounded-lg max-w-4xl mx-auto p-6 sm:p-8">
       <div className="mb-8">
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <h3 className="text-2xl font-bold text-foreground mb-2">
           Select Assessment Tests
         </h3>
-        <p className="text-gray-600">
+        <p className="text-muted-foreground">
           Choose the assessments that best match your guidance needs. We recommend taking at least two different assessments for the most comprehensive results.
         </p>
       </div>
@@ -193,9 +193,9 @@ const Assessment: React.FC = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-600">{testDescriptions.dat.description}</p>
+            <p className="text-sm text-muted-foreground">{testDescriptions.dat.description}</p>
           </CardContent>
-          <CardFooter className="pt-0 text-xs text-gray-500">
+          <CardFooter className="pt-0 text-xs text-muted-foreground">
             Duration: {testDescriptions.dat.duration}
           </CardFooter>
         </Card>
@@ -217,9 +217,9 @@ const Assessment: React.FC = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-600">{testDescriptions.holland.description}</p>
+            <p className="text-sm text-muted-foreground">{testDescriptions.holland.description}</p>
           </CardContent>
-          <CardFooter className="pt-0 text-xs text-gray-500">
+          <CardFooter className="pt-0 text-xs text-muted-foreground">
             Duration: {testDescriptions.holland.duration}
           </CardFooter>
         </Card>
@@ -241,9 +241,9 @@ const Assessment: React.FC = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-600">{testDescriptions.mbti.description}</p>
+            <p className="text-sm text-muted-foreground">{testDescriptions.mbti.description}</p>
           </CardContent>
-          <CardFooter className="pt-0 text-xs text-gray-500">
+          <CardFooter className="pt-0 text-xs text-muted-foreground">
             Duration: {testDescriptions.mbti.duration}
           </CardFooter>
         </Card>
@@ -265,9 +265,9 @@ const Assessment: React.FC = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-600">{testDescriptions.academic.description}</p>
+            <p className="text-sm text-muted-foreground">{testDescriptions.academic.description}</p>
           </CardContent>
-          <CardFooter className="pt-0 text-xs text-gray-500">
+          <CardFooter className="pt-0 text-xs text-muted-foreground">
             Duration: {testDescriptions.academic.duration}
           </CardFooter>
         </Card>
@@ -289,18 +289,18 @@ const Assessment: React.FC = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-            <p className="text-sm text-gray-600">
+            <p className="text-sm text-muted-foreground">
               Explore your professional goals and values to help align your academic path with future career aspirations in South Africa.
             </p>
           </CardContent>
-          <CardFooter className="pt-0 text-xs text-gray-500">
+          <CardFooter className="pt-0 text-xs text-muted-foreground">
             Duration: 15-20 minutes
           </CardFooter>
         </Card>
       </div>
       
       <div className="flex justify-between items-center">
-        <div className="text-sm text-gray-500">
+        <div className="text-sm text-muted-foreground">
           {selectedTests.length} test{selectedTests.length !== 1 ? 's' : ''} selected
         </div>
         <div className="space-x-4">
@@ -325,10 +325,10 @@ const Assessment: React.FC = () => {
     if (currentSection === null || !question) return null;
     
     return (
-      <div className="bg-white shadow rounded-lg max-w-3xl mx-auto p-6 sm:p-8">
+      <div className="bg-card shadow rounded-lg max-w-3xl mx-auto p-6 sm:p-8">
         <div className="mb-6">
           <div className="flex justify-between items-center">
-            <h3 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-foreground">
               {sections[currentSection].title}
             </h3>
             <Badge variant="outline" className="bg-primary-50">
@@ -336,12 +336,12 @@ const Assessment: React.FC = () => {
             </Badge>
           </div>
           
-          <p className="text-sm text-gray-500 mt-1">
+          <p className="text-sm text-muted-foreground mt-1">
             {sections[currentSection].description}
           </p>
           
           <div className="mt-4">
-            <div className="flex justify-between text-xs text-gray-500 mb-1">
+            <div className="flex justify-between text-xs text-muted-foreground mb-1">
               <span>Overall Progress</span>
               <span>{Math.round(progress?.progressPercentage || 0)}%</span>
             </div>
@@ -349,8 +349,8 @@ const Assessment: React.FC = () => {
           </div>
         </div>
 
-        <div className="p-4 bg-gray-50 rounded-lg mb-8">
-          <h4 className="text-lg font-medium text-gray-900 mb-4">{question.text}</h4>
+        <div className="p-4 bg-background rounded-lg mb-8">
+          <h4 className="text-lg font-medium text-foreground mb-4">{question.text}</h4>
           
           <RadioGroup
             value={answers[question.id] || ''}
@@ -358,7 +358,7 @@ const Assessment: React.FC = () => {
             className="space-y-3"
           >
             {question.options.map((option, index) => (
-              <div key={index} className="flex items-center space-x-2 p-3 rounded-md hover:bg-white">
+              <div key={index} className="flex items-center space-x-2 p-3 rounded-md hover:bg-card">
                 <RadioGroupItem value={option.value} id={`option-${question.id}-${index}`} />
                 <Label className="flex-1" htmlFor={`option-${question.id}-${index}`}>{option.text}</Label>
               </div>
@@ -386,23 +386,23 @@ const Assessment: React.FC = () => {
   };
 
   const renderSummary = () => (
-    <div className="bg-white shadow rounded-lg max-w-3xl mx-auto p-6 sm:p-8">
+    <div className="bg-card shadow rounded-lg max-w-3xl mx-auto p-6 sm:p-8">
       <div className="text-center mb-8">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary-100 text-primary-800 mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="20 6 9 17 4 12"></polyline>
           </svg>
         </div>
-        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+        <h3 className="text-2xl font-bold text-foreground mb-2">
           Assessment Complete!
         </h3>
-        <p className="text-gray-600 max-w-md mx-auto">
+        <p className="text-muted-foreground max-w-md mx-auto">
           You've completed all selected assessments. Your results are ready to be analyzed to find your perfect university match.
         </p>
       </div>
       
-      <div className="bg-gray-50 p-4 rounded-lg mb-8">
-        <h4 className="font-medium text-gray-900 mb-2">Tests Completed:</h4>
+      <div className="bg-background p-4 rounded-lg mb-8">
+        <h4 className="font-medium text-foreground mb-2">Tests Completed:</h4>
         <ul className="space-y-2">
           {selectedTests.map(testId => {
             const section = sections.find(s => s.id === testId);
@@ -431,7 +431,7 @@ const Assessment: React.FC = () => {
         >
           View My Results
         </Button>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-muted-foreground mt-4">
           Your answers are saved and can be revisited later if needed.
         </p>
       </div>
@@ -442,10 +442,10 @@ const Assessment: React.FC = () => {
     <section className="bg-primary-50 py-12 sm:py-16">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+          <h2 className="text-3xl font-extrabold text-foreground sm:text-4xl">
             {t('assessment.title')}
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-500">
+          <p className="mt-4 max-w-2xl mx-auto text-xl text-muted-foreground">
             {t('assessment.subtitle')}
           </p>
         </div>

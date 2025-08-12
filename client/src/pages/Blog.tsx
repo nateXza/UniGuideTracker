@@ -160,7 +160,7 @@ const Blog: React.FC = () => {
         {t('blog.title', 'UniGuide Blog')}
       </h1>
       
-      <p className="text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+      <p className="text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
         {t('blog.subtitle', 'Insights, advice, and guidance for your educational journey')}
       </p>
       
@@ -182,14 +182,14 @@ const Blog: React.FC = () => {
                     <Badge className="bg-primary-100 text-primary-800 hover:bg-primary-100">
                       {featuredPost.category}
                     </Badge>
-                    <span className="text-sm text-gray-500">{featuredPost.date}</span>
+                    <span className="text-sm text-muted-foreground">{featuredPost.date}</span>
                   </div>
                   
                   <CardTitle className="text-2xl md:text-3xl mb-3">
                     {featuredPost.title}
                   </CardTitle>
                   
-                  <CardDescription className="text-base text-gray-600 mb-4">
+                  <CardDescription className="text-base text-muted-foreground mb-4">
                     {featuredPost.excerpt}
                   </CardDescription>
                 </div>
@@ -200,8 +200,8 @@ const Blog: React.FC = () => {
                       <AvatarFallback>{featuredPost.author.avatar}</AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="font-medium text-gray-900">{featuredPost.author.name}</p>
-                      <p className="text-sm text-gray-500">{featuredPost.author.role}</p>
+                      <p className="font-medium text-foreground">{featuredPost.author.name}</p>
+                      <p className="text-sm text-muted-foreground">{featuredPost.author.role}</p>
                     </div>
                   </div>
                   
@@ -254,11 +254,11 @@ const Blog: React.FC = () => {
         
         {/* Article Grid */}
         {filteredPosts.length === 0 ? (
-          <div className="text-center py-12 bg-gray-50 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+          <div className="text-center py-12 bg-background rounded-lg">
+            <h3 className="text-xl font-semibold text-foreground mb-2">
               {t('blog.noResults', 'No articles found')}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-muted-foreground">
               {t('blog.tryAdjusting', 'Try adjusting your search or filter criteria')}
             </p>
           </div>
@@ -273,7 +273,7 @@ const Blog: React.FC = () => {
                     className="h-full w-full object-cover"
                   />
                   <div className="absolute top-3 left-3">
-                    <Badge className="bg-white/80 text-primary-800 hover:bg-white/90 backdrop-blur-sm">
+                    <Badge className="bg-card/80 text-primary-800 hover:bg-card/90 backdrop-blur-sm">
                       {post.category}
                     </Badge>
                   </div>
@@ -284,13 +284,13 @@ const Blog: React.FC = () => {
                 </CardHeader>
                 
                 <CardContent className="pb-2 flex-grow">
-                  <CardDescription className="line-clamp-3 text-gray-600">
+                  <CardDescription className="line-clamp-3 text-muted-foreground">
                     {post.excerpt}
                   </CardDescription>
                 </CardContent>
                 
                 <CardFooter className="flex flex-col items-start space-y-4 pt-0">
-                  <div className="flex items-center justify-between w-full text-sm text-gray-500">
+                  <div className="flex items-center justify-between w-full text-sm text-muted-foreground">
                     <div className="flex items-center gap-1">
                       <Calendar className="h-4 w-4" />
                       <span>{post.date}</span>
@@ -345,10 +345,10 @@ const Blog: React.FC = () => {
       {/* Newsletter Signup */}
       <div className="max-w-4xl mx-auto mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl">
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl font-bold text-foreground mb-2">
             {t('blog.newsletter.title', 'Stay Updated')}
           </h2>
-          <p className="text-gray-600 mb-6">
+          <p className="text-muted-foreground mb-6">
             {t('blog.newsletter.description', 'Subscribe to our newsletter for the latest articles, tips, and university guidance resources.')}
           </p>
           

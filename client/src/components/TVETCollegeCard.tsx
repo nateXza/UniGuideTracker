@@ -43,11 +43,11 @@ const TVETCollegeCard: React.FC<TVETCollegeCardProps> = ({ college, onClick }) =
         <CardHeader className="pb-2">
           <div className="flex justify-between items-start">
             <div>
-              <CardTitle className="text-xl font-bold text-gray-800">{college.name}</CardTitle>
-              <CardDescription className="text-gray-600">{college.location}, {college.province}</CardDescription>
+              <CardTitle className="text-xl font-bold text-foreground">{college.name}</CardTitle>
+              <CardDescription className="text-muted-foreground">{college.location}, {college.province}</CardDescription>
             </div>
             {college.logo && (
-              <div className="h-12 w-12 rounded-full overflow-hidden bg-white shadow-sm">
+              <div className="h-12 w-12 rounded-full overflow-hidden bg-card shadow-sm">
                 <img src={college.logo} alt={`${college.name} logo`} className="h-full w-full object-contain" />
               </div>
             )}
@@ -56,7 +56,7 @@ const TVETCollegeCard: React.FC<TVETCollegeCardProps> = ({ college, onClick }) =
         <CardContent>
           <div className="space-y-4">
             <div>
-              <p className="text-sm text-gray-600 line-clamp-3">
+              <p className="text-sm text-muted-foreground line-clamp-3">
                 {college.description.substring(0, 150)}
                 {college.description.length > 150 ? '...' : ''}
               </p>
@@ -73,7 +73,7 @@ const TVETCollegeCard: React.FC<TVETCollegeCardProps> = ({ college, onClick }) =
                 </Badge>
               )}
             </div>
-            <div className="text-sm text-gray-600">
+            <div className="text-sm text-muted-foreground">
               <div className="flex justify-between">
                 <span>{t('tvetColleges.campuses')}:</span>
                 <span className="font-medium">{Array.isArray(college.campuses) ? college.campuses.length : 0}</span>

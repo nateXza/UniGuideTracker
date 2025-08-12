@@ -78,7 +78,7 @@ const Contact: React.FC = () => {
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12">
         <div>
           <div className="prose max-w-none">
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-muted-foreground">
               {t('contact.description', 'Have questions about our university guidance platform? We are here to help! Fill out the form and we will get back to you as soon as possible.')}
             </p>
             
@@ -89,9 +89,9 @@ const Contact: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <div className="ml-3 text-base text-gray-600">
+                <div className="ml-3 text-base text-muted-foreground">
                   <p>{t('contact.email', 'Email')}</p>
-                  <p className="font-medium text-gray-800">info@uniguide.co.za</p>
+                  <p className="font-medium text-foreground">info@uniguide.co.za</p>
                 </div>
               </div>
               
@@ -101,9 +101,9 @@ const Contact: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <div className="ml-3 text-base text-gray-600">
+                <div className="ml-3 text-base text-muted-foreground">
                   <p>{t('contact.phone', 'Phone')}</p>
-                  <p className="font-medium text-gray-800">+27 21 123 4567</p>
+                  <p className="font-medium text-foreground">+27 21 123 4567</p>
                 </div>
               </div>
               
@@ -114,9 +114,9 @@ const Contact: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <div className="ml-3 text-base text-gray-600">
+                <div className="ml-3 text-base text-muted-foreground">
                   <p>{t('contact.address', 'Address')}</p>
-                  <p className="font-medium text-gray-800">
+                  <p className="font-medium text-foreground">
                     123 Education Street<br />
                     Cape Town 8001<br />
                     South Africa
@@ -126,10 +126,10 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="mt-8">
-              <h2 className="text-xl font-semibold text-gray-900 mb-4">
+              <h2 className="text-xl font-semibold text-foreground mb-4">
                 {t('contact.operatingHours', 'Operating Hours')}
               </h2>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-muted-foreground">
                 <li><span className="font-medium">Monday - Friday:</span> 8:00 AM - 5:00 PM</li>
                 <li><span className="font-medium">Saturday:</span> 9:00 AM - 1:00 PM</li>
                 <li><span className="font-medium">Sunday:</span> Closed</li>
@@ -138,8 +138,8 @@ const Contact: React.FC = () => {
           </div>
         </div>
         
-        <div className="bg-white p-8 rounded-xl shadow-md">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <div className="bg-card p-8 rounded-xl shadow-md">
+          <h2 className="text-2xl font-bold text-foreground mb-6">
             {t('contact.formTitle', 'Send us a message')}
           </h2>
           

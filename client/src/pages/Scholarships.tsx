@@ -151,7 +151,7 @@ const Scholarships: React.FC = () => {
         {t('scholarships.title', 'Scholarships & Bursaries')}
       </h1>
       
-      <p className="text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+      <p className="text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
         {t('scholarships.subtitle', 'Discover funding opportunities to support your higher education journey in South Africa')}
       </p>
       
@@ -189,11 +189,11 @@ const Scholarships: React.FC = () => {
         </div>
         
         {filteredScholarships.length === 0 ? (
-          <div className="text-center py-12 bg-gray-50 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+          <div className="text-center py-12 bg-background rounded-lg">
+            <h3 className="text-xl font-semibold text-foreground mb-2">
               {t('scholarships.noResults', 'No scholarships found')}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-muted-foreground">
               {t('scholarships.tryAdjusting', 'Try adjusting your search or filter criteria')}
             </p>
           </div>
@@ -213,19 +213,19 @@ const Scholarships: React.FC = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-700 mb-4">{scholarship.description}</p>
+                  <p className="text-foreground mb-4">{scholarship.description}</p>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{t('scholarships.eligibility', 'Eligibility')}</h4>
-                      <ul className="list-disc pl-5 text-sm text-gray-600">
+                      <h4 className="font-semibold text-foreground mb-2">{t('scholarships.eligibility', 'Eligibility')}</h4>
+                      <ul className="list-disc pl-5 text-sm text-muted-foreground">
                         {scholarship.eligibility.map((item, index) => (
                           <li key={index}>{item}</li>
                         ))}
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">{t('scholarships.fields', 'Fields of Study')}</h4>
+                      <h4 className="font-semibold text-foreground mb-2">{t('scholarships.fields', 'Fields of Study')}</h4>
                       <div className="flex flex-wrap gap-2">
                         {scholarship.fields.map((field, index) => (
                           <Badge key={index} variant="outline" className="bg-blue-50">
@@ -254,7 +254,7 @@ const Scholarships: React.FC = () => {
       </div>
       
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">
+        <h2 className="text-2xl font-bold text-foreground mb-4">
           {t('scholarships.tips.title', 'Scholarship Application Tips')}
         </h2>
         
@@ -263,46 +263,46 @@ const Scholarships: React.FC = () => {
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">1</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('scholarships.tips.start.title', 'Start Early')}</h3>
-                <p className="text-gray-700">{t('scholarships.tips.start.desc', 'Begin researching and applying for scholarships at least a year before your studies commence.')}</p>
+                <h3 className="font-semibold text-foreground">{t('scholarships.tips.start.title', 'Start Early')}</h3>
+                <p className="text-foreground">{t('scholarships.tips.start.desc', 'Begin researching and applying for scholarships at least a year before your studies commence.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">2</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('scholarships.tips.requirements.title', 'Meet All Requirements')}</h3>
-                <p className="text-gray-700">{t('scholarships.tips.requirements.desc', 'Ensure you meet all eligibility criteria before applying to avoid wasting time on applications that will be rejected.')}</p>
+                <h3 className="font-semibold text-foreground">{t('scholarships.tips.requirements.title', 'Meet All Requirements')}</h3>
+                <p className="text-foreground">{t('scholarships.tips.requirements.desc', 'Ensure you meet all eligibility criteria before applying to avoid wasting time on applications that will be rejected.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">3</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('scholarships.tips.documents.title', 'Prepare Documents')}</h3>
-                <p className="text-gray-700">{t('scholarships.tips.documents.desc', 'Keep certified copies of your ID, academic transcripts, and proof of income ready to streamline multiple applications.')}</p>
+                <h3 className="font-semibold text-foreground">{t('scholarships.tips.documents.title', 'Prepare Documents')}</h3>
+                <p className="text-foreground">{t('scholarships.tips.documents.desc', 'Keep certified copies of your ID, academic transcripts, and proof of income ready to streamline multiple applications.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">4</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('scholarships.tips.essay.title', 'Craft Compelling Essays')}</h3>
-                <p className="text-gray-700">{t('scholarships.tips.essay.desc', 'Take time to write thoughtful, tailored essays that showcase your unique qualities and aspirations.')}</p>
+                <h3 className="font-semibold text-foreground">{t('scholarships.tips.essay.title', 'Craft Compelling Essays')}</h3>
+                <p className="text-foreground">{t('scholarships.tips.essay.desc', 'Take time to write thoughtful, tailored essays that showcase your unique qualities and aspirations.')}</p>
               </div>
             </li>
             <li className="flex items-start">
               <div className="bg-blue-100 text-blue-800 rounded-full h-6 w-6 flex items-center justify-center mr-2 mt-0.5">5</div>
               <div>
-                <h3 className="font-semibold text-gray-900">{t('scholarships.tips.deadlines.title', 'Track Deadlines')}</h3>
-                <p className="text-gray-700">{t('scholarships.tips.deadlines.desc', 'Create a calendar of application deadlines to ensure you submit all required materials on time.')}</p>
+                <h3 className="font-semibold text-foreground">{t('scholarships.tips.deadlines.title', 'Track Deadlines')}</h3>
+                <p className="text-foreground">{t('scholarships.tips.deadlines.desc', 'Create a calendar of application deadlines to ensure you submit all required materials on time.')}</p>
               </div>
             </li>
           </ul>
         </div>
         
         <div className="text-center">
-          <p className="italic text-gray-600 mb-4">
+          <p className="italic text-muted-foreground mb-4">
             {t('scholarships.disclaimer', 'Disclaimer: The scholarship information provided on this page is for guidance purposes only. For the most up-to-date and official information, please visit each scholarship provider\'s official website.')}
           </p>
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-muted-foreground">
             {t('scholarships.lastUpdated', 'Last updated: April 2023')}
           </p>
         </div>

@@ -45,7 +45,7 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
               </DialogDescription>
             </div>
             {college.logo && (
-              <div className="h-16 w-16 rounded-md overflow-hidden bg-white shadow-sm">
+              <div className="h-16 w-16 rounded-md overflow-hidden bg-card shadow-sm">
                 <img
                   src={college.logo}
                   alt={`${college.name} logo`}
@@ -68,7 +68,7 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
             <TabsContent value="overview" className="mt-0 space-y-4">
               <div>
                 <h3 className="text-lg font-semibold mb-2">{t('tvetColleges.about')}</h3>
-                <p className="text-gray-700">{college.description}</p>
+                <p className="text-foreground">{college.description}</p>
               </div>
 
               <div>
@@ -110,7 +110,7 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
               </div>
 
               <div className="flex items-center space-x-2">
-                <Home className="h-5 w-5 text-gray-500" />
+                <Home className="h-5 w-5 text-muted-foreground" />
                 <span>
                   {t('tvetColleges.accommodation')}: {college.accommodationAvailable ? t('yes') : t('no')}
                 </span>
@@ -124,16 +124,16 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
                     <h3 className="text-lg font-semibold mb-1">{program.name}</h3>
                     <div className="grid grid-cols-2 gap-4 mb-3">
                       <div className="flex items-center gap-2">
-                        <Calendar className="h-4 w-4 text-gray-500" />
+                        <Calendar className="h-4 w-4 text-muted-foreground" />
                         <span className="text-sm">{program.duration}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <BarChart className="h-4 w-4 text-gray-500" />
+                        <BarChart className="h-4 w-4 text-muted-foreground" />
                         <span className="text-sm">{program.level}</span>
                       </div>
                     </div>
-                    <p className="text-gray-700 mb-3">{program.description}</p>
-                    <div className="bg-gray-50 p-3 rounded-md">
+                    <p className="text-foreground mb-3">{program.description}</p>
+                    <div className="bg-background p-3 rounded-md">
                       <p className="text-sm">
                         <strong>{t('tvetColleges.requirements')}:</strong> {program.requirements}
                       </p>
@@ -145,14 +145,14 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
 
             <TabsContent value="campuses" className="mt-0">
               <div className="space-y-4">
-                <p className="text-gray-700">
+                <p className="text-foreground">
                   {t('tvetColleges.campusesIntro', { collegeName: college.name })}
                 </p>
                 <div className="grid md:grid-cols-2 gap-4">
                   {getCampuses().map((campus, index) => (
                     <div key={index} className="border rounded-lg p-4 shadow-sm">
                       <h3 className="font-semibold mb-1">{campus} {t('tvetColleges.campus')}</h3>
-                      <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
                         <MapPin className="h-4 w-4" />
                         <span>{campus}, {college.province}</span>
                       </div>
@@ -207,8 +207,8 @@ const TVETCollegeModal: React.FC<TVETCollegeModalProps> = ({ college, isOpen, on
 
         <DialogFooter className="sm:justify-between px-6 py-4 flex-shrink-0 border-t">
           <div className="flex items-center gap-2">
-            <BookOpen className="h-5 w-5 text-gray-500" />
-            <span className="text-sm text-gray-700">
+            <BookOpen className="h-5 w-5 text-muted-foreground" />
+            <span className="text-sm text-foreground">
               {t('tvetColleges.programsCount', { count: getPrograms().length })}
             </span>
           </div>

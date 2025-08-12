@@ -404,7 +404,7 @@ const Careers: React.FC = () => {
         {t('careers.title', 'Career Guides')}
       </h1>
       
-      <p className="text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+      <p className="text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
         {t('careers.subtitle', 'Explore different career paths, required qualifications, and job opportunities in South Africa')}
       </p>
       
@@ -441,11 +441,11 @@ const Careers: React.FC = () => {
         </div>
         
         {filteredCareerFields.length === 0 ? (
-          <div className="text-center py-12 bg-gray-50 rounded-lg">
-            <h3 className="text-xl font-semibold text-gray-700 mb-2">
+          <div className="text-center py-12 bg-background rounded-lg">
+            <h3 className="text-xl font-semibold text-foreground mb-2">
               {t('careers.noResults', 'No career fields found')}
             </h3>
-            <p className="text-gray-600">
+            <p className="text-muted-foreground">
               {t('careers.tryAdjusting', 'Try adjusting your search or filter criteria')}
             </p>
           </div>
@@ -472,7 +472,7 @@ const Careers: React.FC = () => {
                           : t('careers.growth.stable', 'Stable Growth')}
                     </Badge>
                   </div>
-                  <CardDescription className="text-gray-600">{field.description}</CardDescription>
+                  <CardDescription className="text-muted-foreground">{field.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="pb-3">
                   <Tabs defaultValue="overview">
@@ -505,7 +505,7 @@ const Careers: React.FC = () => {
                       
                       <div>
                         <h3 className="text-lg font-semibold mb-2">{t('careers.salaryRange', 'Typical Salary Range')}</h3>
-                        <p className="text-gray-700">{field.salaryRange} {t('careers.perYear', 'per year')}</p>
+                        <p className="text-foreground">{field.salaryRange} {t('careers.perYear', 'per year')}</p>
                       </div>
                       
                       <div>
@@ -513,8 +513,8 @@ const Careers: React.FC = () => {
                         <div className="space-y-2">
                           {field.skills.map((skill, index) => (
                             <div key={index}>
-                              <h4 className="font-medium text-gray-900">{skill.name}</h4>
-                              <p className="text-sm text-gray-600">{skill.description}</p>
+                              <h4 className="font-medium text-foreground">{skill.name}</h4>
+                              <p className="text-sm text-muted-foreground">{skill.description}</p>
                             </div>
                           ))}
                         </div>
@@ -526,17 +526,17 @@ const Careers: React.FC = () => {
                         <h3 className="text-lg font-semibold mb-2">{t('careers.qualifications', 'Common Qualifications')}</h3>
                         <ul className="list-disc pl-5 space-y-1">
                           {field.education.map((edu, index) => (
-                            <li key={index} className="text-gray-700">{edu}</li>
+                            <li key={index} className="text-foreground">{edu}</li>
                           ))}
                         </ul>
                         
                         <h3 className="text-lg font-semibold mb-2 mt-6">{t('careers.careerPathways', 'Career Progression Pathways')}</h3>
                         <div className="space-y-4">
                           {field.pathways.map((pathway, index) => (
-                            <div key={index} className="bg-gray-50 p-4 rounded-lg">
-                              <h4 className="font-medium text-gray-900">{pathway.title}</h4>
-                              <p className="text-sm text-gray-600 mb-1">{pathway.description}</p>
-                              <p className="text-xs text-gray-500">{t('careers.timeframe', 'Typical timeframe')}: {pathway.timeframe}</p>
+                            <div key={index} className="bg-background p-4 rounded-lg">
+                              <h4 className="font-medium text-foreground">{pathway.title}</h4>
+                              <p className="text-sm text-muted-foreground mb-1">{pathway.description}</p>
+                              <p className="text-xs text-muted-foreground">{t('careers.timeframe', 'Typical timeframe')}: {pathway.timeframe}</p>
                             </div>
                           ))}
                         </div>
@@ -555,16 +555,16 @@ const Careers: React.FC = () => {
                               </AccordionTrigger>
                               <AccordionContent>
                                 <div className="space-y-3 pt-2">
-                                  <p className="text-gray-700">{career.description}</p>
+                                  <p className="text-foreground">{career.description}</p>
                                   
                                   <div>
-                                    <h4 className="text-sm font-semibold text-gray-900">{t('careers.typicalSalary', 'Typical Salary Range')}</h4>
-                                    <p className="text-sm text-gray-600">{career.salary} {t('careers.perYear', 'per year')}</p>
+                                    <h4 className="text-sm font-semibold text-foreground">{t('careers.typicalSalary', 'Typical Salary Range')}</h4>
+                                    <p className="text-sm text-muted-foreground">{career.salary} {t('careers.perYear', 'per year')}</p>
                                   </div>
                                   
                                   <div>
-                                    <h4 className="text-sm font-semibold text-gray-900">{t('careers.requirements', 'Requirements')}</h4>
-                                    <p className="text-sm text-gray-600">{career.requirements}</p>
+                                    <h4 className="text-sm font-semibold text-foreground">{t('careers.requirements', 'Requirements')}</h4>
+                                    <p className="text-sm text-muted-foreground">{career.requirements}</p>
                                   </div>
                                 </div>
                               </AccordionContent>
@@ -576,7 +576,7 @@ const Careers: React.FC = () => {
                   </Tabs>
                 </CardContent>
                 <CardFooter className="pt-0">
-                  <p className="text-sm text-gray-500 italic">
+                  <p className="text-sm text-muted-foreground italic">
                     {t('careers.dataNote', 'Note: Salary ranges and job growth information are approximations based on current market trends in South Africa.')}
                   </p>
                 </CardFooter>
@@ -587,12 +587,12 @@ const Careers: React.FC = () => {
       </div>
       
       <div className="max-w-4xl mx-auto mt-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-6 text-center">
+        <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
           {t('careers.matchingTitle', 'Find Your Perfect Career Match')}
         </h2>
         
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-8 rounded-xl text-center">
-          <p className="text-lg text-gray-700 mb-6">
+          <p className="text-lg text-foreground mb-6">
             {t('careers.matchingDesc', 'Take our comprehensive assessment to discover careers that align with your unique personality, interests, and strengths.')}
           </p>
           

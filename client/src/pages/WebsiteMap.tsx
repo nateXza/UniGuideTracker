@@ -12,7 +12,7 @@ const WebsiteMap: React.FC = () => {
         {t('sitemap.title', 'UniGuide Website Map')}
       </h1>
       
-      <p className="text-xl text-gray-600 text-center mb-10 max-w-3xl mx-auto">
+      <p className="text-xl text-muted-foreground text-center mb-10 max-w-3xl mx-auto">
         {t('sitemap.subtitle', 'Complete navigation structure and content organization of the UniGuide platform')}
       </p>
 
@@ -92,35 +92,35 @@ const WebsiteMap: React.FC = () => {
               {/* Secondary navigation level */}
               <div className="flex justify-between w-full mb-8">
                 <div className="flex flex-col items-center">
-                  <div className="p-2 bg-gray-100 text-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
                     <Link href="/contact">Contact</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
                     <Link href="/scholarships">Scholarships</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
                     <Link href="/nsfas">NSFAS</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
                     <Link href="/deadlines">Deadlines</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-800 rounded-lg shadow-sm">
+                  <div className="p-2 bg-gray-100 text-foreground rounded-lg shadow-sm">
                     <Link href="/blog">Blog</Link>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ const WebsiteMap: React.FC = () => {
               </div>
               
               <div className="w-0.5 h-4 bg-gray-300"></div>
-              <div className="p-3 bg-gray-200 text-gray-800 rounded-lg shadow-md mb-4 text-center">
+              <div className="p-3 bg-gray-200 text-foreground rounded-lg shadow-md mb-4 text-center">
                 Footer Links
               </div>
               
@@ -143,21 +143,21 @@ const WebsiteMap: React.FC = () => {
               <div className="flex justify-between w-[700px]">
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-600 rounded-lg shadow-sm text-sm">
+                  <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg shadow-sm text-sm">
                     <Link href="/privacy">Privacy Policy</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-600 rounded-lg shadow-sm text-sm">
+                  <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg shadow-sm text-sm">
                     <Link href="/terms">Terms of Service</Link>
                   </div>
                 </div>
                 
                 <div className="flex flex-col items-center">
                   <div className="w-0.5 h-4 bg-gray-300"></div>
-                  <div className="p-2 bg-gray-100 text-gray-600 rounded-lg shadow-sm text-sm">
+                  <div className="p-2 bg-gray-100 text-muted-foreground rounded-lg shadow-sm text-sm">
                     <Link href="/cookies">Cookie Policy</Link>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ const WebsiteMap: React.FC = () => {
         </div>
         
         {/* User flow diagrams */}
-        <h2 className="text-2xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl font-bold text-foreground mb-6">
           {t('sitemap.userFlows', 'Key User Flows')}
         </h2>
         
@@ -253,7 +253,7 @@ const WebsiteMap: React.FC = () => {
         </div>
         
         <div className="text-center">
-          <p className="text-gray-600 mb-6">
+          <p className="text-muted-foreground mb-6">
             {t('sitemap.note', 'This diagram represents the complete navigational structure of the UniGuide platform, showing how pages are interconnected and accessible.')}
           </p>
         </div>

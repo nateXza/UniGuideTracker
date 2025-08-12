@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="flex items-center">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary-700 font-bold text-xl">
+              <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center text-primary-700 font-bold text-xl">
                 U
               </div>
               <span className="ml-2 text-xl font-semibold">UniGuide</span>
@@ -121,7 +121,7 @@ const Footer: React.FC = () => {
                 <Input 
                   type="email" 
                   placeholder={t('footer.yourEmail')} 
-                  className="rounded-r-none text-gray-800"
+                  className="rounded-r-none text-foreground"
                 />
                 <Button type="submit" className="rounded-l-none px-4">
                   <i className="fas fa-paper-plane"></i>
