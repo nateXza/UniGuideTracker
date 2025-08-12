@@ -70,6 +70,25 @@ export const tvetColleges = pgTable("tvet_colleges", {
   applicationDeadlines: jsonb("application_deadlines").$type<{
     semester1: string;
     semester2: string;
+  }>(),
+  studentSupport: jsonb("student_support").$type<string[]>(),
+  accommodationAvailable: boolean("accommodation_available").default(false),
+  fees: jsonb("fees").$type<{
+    nationalCertificate: string;
+    diploma: string;
+  }>(),
+  artisanPrograms: boolean("artisan_programs").default(false),
+  businessPrograms: boolean("business_programs").default(false),
+  engineeringPrograms: boolean("engineering_programs").default(false),
+  itPrograms: boolean("it_programs").default(false),
+  hospitalityPrograms: boolean("hospitality_programs").default(false),
+  agriculture: boolean("agriculture").default(false),
+  media: boolean("media").default(false),
+  safety: boolean("safety").default(false),
+  tourism: boolean("tourism").default(false),
+});
+
+export type TvetCollege = typeof tvetColleges.$inferSelect;
 
 // Private colleges table
 export const privateColleges = pgTable("private_colleges", {
@@ -100,24 +119,6 @@ export const privateColleges = pgTable("private_colleges", {
 });
 
 export type PrivateCollege = typeof privateColleges.$inferSelect;
-
-  }>(),
-  studentSupport: jsonb("student_support").$type<string[]>(),
-  accommodationAvailable: boolean("accommodation_available").default(false),
-  fees: jsonb("fees").$type<{
-    nationalCertificate: string;
-    diploma: string;
-  }>(),
-  artisanPrograms: boolean("artisan_programs").default(false),
-  businessPrograms: boolean("business_programs").default(false),
-  engineeringPrograms: boolean("engineering_programs").default(false),
-  itPrograms: boolean("it_programs").default(false),
-  hospitalityPrograms: boolean("hospitality_programs").default(false),
-  agriculture: boolean("agriculture").default(false),
-  media: boolean("media").default(false),
-  safety: boolean("safety").default(false),
-  tourism: boolean("tourism").default(false),
-});
 
 // Career/job market data table
 export const careerJobMarketData = pgTable("career_job_market_data", {
@@ -382,7 +383,6 @@ export type InsertUniversityMatch = z.infer<typeof insertUniversityMatchSchema>;
 export type UniversityMatch = typeof universityMatches.$inferSelect;
 
 export type InsertTvetCollege = z.infer<typeof insertTvetCollegeSchema>;
-export type TvetCollege = typeof tvetColleges.$inferSelect;
 
 export type InsertCareerJobMarketData = z.infer<typeof insertCareerJobMarketDataSchema>;
 export type CareerJobMarketData = typeof careerJobMarketData.$inferSelect;

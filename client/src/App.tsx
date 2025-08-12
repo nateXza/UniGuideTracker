@@ -24,6 +24,7 @@ import WebsiteMap from "@/pages/WebsiteMap";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ProfileProvider } from "@/context/ProfileContext";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 function Router() {
   return (
