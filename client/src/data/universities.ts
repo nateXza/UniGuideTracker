@@ -4,7 +4,7 @@ export const universities: University[] = [
   {
     id: 1,
     name: 'University of Cape Town',
-    image: 'https://images.unsplash.com/photo-1592280771190-3e2e4d977758?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/University_of_Cape_Town_logo.svg/1200px-University_of_Cape_Town_logo.svg.png',
     location: 'Cape Town',
     province: 'Western Cape',
@@ -58,7 +58,7 @@ export const universities: University[] = [
   {
     id: 3,
     name: 'Stellenbosch University',
-    image: 'https://images.unsplash.com/photo-1534009502677-4c9c27408025?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1592280771190-3e2e4d977758?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4d/SU_Logo_Centered.svg/1200px-SU_Logo_Centered.svg.png',
     location: 'Stellenbosch',
     province: 'Western Cape',
@@ -222,7 +222,7 @@ export const universities: University[] = [
   {
     id: 9,
     name: 'University of the Free State',
-    image: 'https://images.unsplash.com/photo-1576834967753-06b2018937d6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logo: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/b7/University_of_the_Free_State_crest.svg/1200px-University_of_the_Free_State_crest.svg.png',
     location: 'Bloemfontein',
     province: 'Free State',
@@ -249,7 +249,7 @@ export const universities: University[] = [
   {
     id: 10,
     name: 'Nelson Mandela University',
-    image: 'https://images.unsplash.com/photo-1571057505848-8a8a55d9293b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
     logo: 'https://upload.wikimedia.org/wikipedia/en/f/fd/Nelson_Mandela_University_logo.png',
     location: 'Port Elizabeth',
     province: 'Eastern Cape',

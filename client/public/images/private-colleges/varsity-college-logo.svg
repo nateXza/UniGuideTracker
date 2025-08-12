@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <rect width="200" height="80" fill="#7c3aed" rx="8"/>
+  <text x="100" y="28" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="18" font-weight="bold">VARSITY</text>
+  <text x="100" y="48" text-anchor="middle" fill="#c4b5fd" font-family="Arial, sans-serif" font-size="14">COLLEGE</text>
+  <rect x="15" y="15" width="8" height="50" fill="#fbbf24"/>
+  <rect x="177" y="15" width="8" height="50" fill="#fbbf24"/>
+</svg>

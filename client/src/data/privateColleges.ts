@@ -7,7 +7,7 @@ export const privateColleges: PrivateCollege[] = [
     name: "Varsity College",
     locations: ["Sandton", "Pretoria", "Cape Town", "Durban North", "Westville", "Pietermaritzburg", "Port Elizabeth", "East London"],
     website: "https://www.varsitycollege.co.za",
-    logo: "/images/private-colleges/varsity-college-logo.png",
+    logo: "/images/private-colleges/varsity-college-logo.svg",
     description: "Varsity College is an educational brand of The Independent Institute of Education (The IIE), providing quality private higher education in South Africa.",
     faculties: [
       "Commerce",

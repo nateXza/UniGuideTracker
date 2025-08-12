@@ -60,7 +60,7 @@ const Blog: React.FC = () => {
       },
       date: "March 15, 2023",
       readTime: "10 min",
-      image: "https://images.unsplash.com/photo-1565514020179-026b92b2a0b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
       category: "Financial Aid",
       tags: ["NSFAS", "Student Funding", "Financial Aid"]
     },
@@ -76,7 +76,7 @@ const Blog: React.FC = () => {
       },
       date: "February 28, 2023",
       readTime: "7 min",
-      image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
       category: "Student Life",
       tags: ["Academic Preparation", "First Year", "Student Success"]
     },
@@ -92,7 +92,7 @@ const Blog: React.FC = () => {
       },
       date: "February 10, 2023",
       readTime: "9 min",
-      image: "https://images.unsplash.com/photo-1573497161079-f3d0e1b30953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+      image: "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80",
       category: "Career Guidance",
       tags: ["Careers", "Job Market", "Employment Trends"]
     },

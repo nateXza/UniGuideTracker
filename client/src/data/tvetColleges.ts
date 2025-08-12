@@ -7,7 +7,7 @@ export const tvetColleges: TvetCollege[] = [
     province: "Western Cape",
     location: "Cape Town",
     website: "https://www.falsebaycollege.co.za",
-    logo: "/images/tvet-colleges/falsebay-logo.png",
+    logo: "/images/tvet-colleges/falsebay-logo.svg",
     description: "False Bay TVET College is a leading Technical and Vocational Education and Training institution committed to quality skills development in South Africa. With five campuses across the Western Cape, the college offers a wide range of accredited programs and courses.",
     campuses: [
       "Muizenberg",
@@ -72,7 +72,7 @@ export const tvetColleges: TvetCollege[] = [
     province: "Western Cape",
     location: "Cape Town",
     website: "https://www.northlink.co.za",
-    logo: "/images/tvet-colleges/northlink-logo.png",
+    logo: "/images/tvet-colleges/northlink-logo.svg",
     description: "Northlink TVET College is a multi-campus technical and vocational education institution in the Western Cape. The college specializes in offering quality technical and occupational education that prepares students for the world of work.",
     campuses: [
       "Belhar",
@@ -132,7 +132,7 @@ export const tvetColleges: TvetCollege[] = [
     province: "Western Cape",
     location: "Cape Town",
     website: "https://www.cct.edu.za",
-    logo: "/images/tvet-colleges/college-of-cape-town-logo.png",
+    logo: "/images/tvet-colleges/college-of-cape-town-logo.svg",
     description: "The College of Cape Town is a leading TVET institution with multiple campuses across Cape Town. The college offers a diverse range of programs designed to meet the skills demands of various industries.",
     campuses: [
       "Athlone",
@@ -192,7 +192,7 @@ export const tvetColleges: TvetCollege[] = [
     province: "Gauteng",
     location: "Johannesburg",
     website: "https://www.eec.edu.za",
-    logo: "/images/tvet-colleges/ekurhuleni-east-logo.png",
+    logo: "/images/tvet-colleges/ekurhuleni-east-logo.svg",
     description: "Ekurhuleni East TVET College is a public TVET college located in the Eastern region of Gauteng. The college focuses on developing technical and vocational skills to address the skills shortage in South Africa.",
     campuses: [
       "Benoni",
@@ -250,7 +250,7 @@ export const tvetColleges: TvetCollege[] = [
     province: "KwaZulu-Natal",
     location: "Pietermaritzburg",
     website: "https://www.umgungundlovu.edu.za",
-    logo: "/images/tvet-colleges/umgungundlovu-logo.png",
+    logo: "/images/tvet-colleges/umgungundlovu-logo.svg",
     description: "Umgungundlovu TVET College is a public technical and vocational education and training college located in KwaZulu-Natal. The college is committed to providing quality education and training to develop skilled professionals.",
     campuses: [
       "Midlands",
@@ -309,7 +309,7 @@ export const tvetColleges: TvetCollege[] = [
     province: "Eastern Cape",
     location: "Butterworth",
     website: "https://www.kinghintsacollege.edu.za",
-    logo: "/images/tvet-colleges/king-hintsa-logo.png",
+    logo: "/images/tvet-colleges/king-hintsa-logo.svg",
     description: "King Hintsa TVET College is a public technical and vocational education institution in the Eastern Cape. The college focuses on skills development in rural communities and preparing students for employment or entrepreneurship.",
     campuses: [
       "Butterworth",
