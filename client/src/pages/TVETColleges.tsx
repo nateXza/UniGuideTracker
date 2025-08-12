@@ -17,7 +17,7 @@ import { tvetColleges } from '@/data/tvetColleges';
 const TVETColleges: React.FC = () => {
   const { t } = useTranslation();
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedProvince, setSelectedProvince] = useState<string>('');
+  const [selectedProvince, setSelectedProvince] = useState<string>('all');
   const [filters, setFilters] = useState({
     engineering: false,
     business: false,
@@ -51,7 +51,7 @@ const TVETColleges: React.FC = () => {
       }
 
       // Province filter
-      if (selectedProvince && college.province !== selectedProvince) {
+      if (selectedProvince && selectedProvince !== "all" && college.province !== selectedProvince) {
         return false;
       }
 
@@ -125,7 +125,7 @@ const TVETColleges: React.FC = () => {
                   size="sm"
                   onClick={() => {
                     setSearchQuery('');
-                    setSelectedProvince('');
+                    setSelectedProvince('all');
                     setFilters({
                       engineering: false,
                       business: false,
@@ -154,7 +154,7 @@ const TVETColleges: React.FC = () => {
                     <SelectValue placeholder={t('tvetColleges.selectProvince')} />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">{t('tvetColleges.allProvinces')}</SelectItem>
+                    <SelectItem value="all">{t('tvetColleges.allProvinces')}</SelectItem>
                     {provinces.map((province) => (
                       <SelectItem key={province} value={province}>
                         {province}
@@ -292,7 +292,7 @@ const TVETColleges: React.FC = () => {
                     variant="outline"
                     onClick={() => {
                       setSearchQuery('');
-                      setSelectedProvince('');
+                      setSelectedProvince('all');
                       setFilters({
                         engineering: false,
                         business: false,
